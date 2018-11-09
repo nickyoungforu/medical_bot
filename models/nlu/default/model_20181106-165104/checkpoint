@@ -1,2 +1,0 @@
-model_checkpoint_path: "/home/nick/workspace/repos/medical_bot/models/nlu/default/model_20181106-165104/intent_classifier_tensorflow_embedding.ckpt"
-all_model_checkpoint_paths: "/home/nick/workspace/repos/medical_bot/models/nlu/default/model_20181106-165104/intent_classifier_tensorflow_embedding.ckpt"
