@@ -10,5 +10,11 @@ from rasa_core_sdk import endpoint
 
 
 class Action_Total(FormAction):
+
     RANDOMIZE = True
+
+    def name(self):
+        return 'action_total'
+
+
     pass
