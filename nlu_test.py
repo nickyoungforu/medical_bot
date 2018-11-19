@@ -6,7 +6,7 @@
 
 from rasa_nlu.model import Interpreter
 import json
-interpreter = Interpreter.load("./models/nlu/default/model_20181106-165104")
+interpreter = Interpreter.load("./models/nlu/current")
 while True:
     try:
         inputs = input('inputs:')

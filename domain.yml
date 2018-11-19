@@ -10,48 +10,55 @@ intents:
   - request_patient_abnormal
   - request_patient_Medical_order
   - request_similar_patient
-#  - request_disease_related_patient
   - request_patient_detail
   - request_related_literature
-#  - request_disease_related_literature
   - request_literature_detail
   - request_related_guide
-#  - request_disease_related_guide
   - request_guide_detail
   - request_collect
-#  - collect
 
 
 slots:
   patient-name:
-    type: text
+    type: unfeaturized
+    auto_fill: false
   medical-record-number:
-    type: text
+    type: unfeaturized
+    auto_fill: false
   hospital-number:
-    type: text
+    type: unfeaturized
+    auto_fill: false
   department:
-    type: text
+    type: unfeaturized
+    auto_fill: false
   admission-time:
-    type: text
+    type: unfeaturized
+    auto_fill: false
   bed-number:
-    type: text
+    type: unfeaturized
+    auto_fill: false
   inspection-name:
-    type: text
+    type: unfeaturized
+    auto_fill: false
   inspection-time:
-    type: text
-#  laboratory-name:
-#    type: text
+    type: unfeaturized
+    auto_fill: false
   laboratory-indicator:
-    type: text
+    type: unfeaturized
+    auto_fill: false
   order-name:
-    type: text
+    type: unfeaturized
+    auto_fill: false
   disease-name:
-    type: text
+    type: unfeaturized
+    auto_fill: false
   literature-name:
-    type: text
+    type: unfeaturized
+    auto_fill: false
   guide-name:
-    type: text
-  matches:
+    type: unfeaturized
+    auto_fill: false
+  requested_slot:
     type: unfeaturized
 
 
@@ -63,7 +70,6 @@ entities:
   - admission-time
   - bed-number
   - inspection-name
-#  - laboratory-name
   - inspection-time
   - laboratory-indicator
   - order-name
@@ -71,126 +77,65 @@ entities:
   - literature-name
   - guide-name
 
+templates:
+  utter_greet:
+    - text: "你好"
+  utter_goodbye:
+    - text: "拜拜"
+  utter_ask_patient-name:
+    - text: "请输入需要查询的患者名字"
+  utter_ask_medical-record-number:
+    - text: "请输入患者的病历号"
+  utter_ask_hospital-number:
+    - text: "请输入患者的住院号"
+  utter_ask_department:
+    - text: "请输入患者的科室"
+  utter_ask_admission-time:
+    - text: "请输入患者的住院时间"
+  utter_ask_bed-number:
+    - text: "请输入患者的床号"
+  utter_ask_inspection-name:
+    - text: "请输入需要查询的检查报告"
+  utter_ask_laboratory-name:
+    - text: "请输入需要查询的检验报告"
+  utter_ask_laboratory-indicator:
+    - text: "请输入需要查询的检验指标"
+  utter_ask_order-name:
+    - text: "请输入需要查询的医嘱类型"
+  utter_ask_disease-name:
+    - text: "请输入需要查询的疾病诊断"
+  utter_ask_literature-name:
+    - text: "请输入需要查询的文献标题"
+  utter_ask_guide-name:
+    - text: "请输入需要查询的临床指南标题"
+  utter_default:
+    - text: "抱歉，我好像听不懂你说的"
+  utter_slots_values:
+    - text: "查询结果:\n
+             - patient-name: {patient-name}\n
+             - admission-time: {admission-time}\n"
+  utter_noworries:
+    - text: "end"
 
 actions:
-  - action_total
-#actions:
-#  - utter_greet
-#  - utter_goodbye
-#  - utter_deny
-#  - utter_ask_patient-name
-#  - utter_ask_medical-record-number
-#  - utter_ask_hospital-number
-#  - utter_ask_department
-#  - utter_ask_admission-time
-#  - utter_ask_bed-number
-#  - utter_ask_inspection-name
-#  - utter_ask_laboratory-name
-#  - utter_ask_laboratory-indicator
-#  - utter_ask_order-name
-#  - utter_ask_disease-name
-#  - utter_ask_literature-name
-#  - utter_ask_guide-name
-#  - utter_report_patient_info
-#  - utter_report_patient_emr
-#  - utter_report_patient_inspection_report
-#  - utter_report_patient_laboratory_report
-#  - utter_report_patient_abnormal
-#  - utter_report_patient_Medical_order
-#  - utter_report_similar_patient
-##  - utter_report_disease_related_patient
-#  - utter_report_patient_detail
-#  - utter_report_related_literature
-##  - utter_report_disease_related_literature
-#  - utter_report_literature_detail
-#  - utter_report_related_guide
-##  - utter_report_disease_related_guide
-#  - utter_report_guide_detail
-#  - utter_report_collect
-#  - action_query_patient_info
-#  - action_query_patient_emr
-#  - action_query_patient_inspection_report
-#  - action_query_patient_laboratory_report
-#  - action_query_patient_abnormal
-#  - action_query_patient_Medical_order
-#  - action_query_similar_patient
-##  - action_query_disease_related_patient
-#  - action_query_patient_detail
-#  - action_query_related_literature
-##  - action_query_disease_related_literature
-#  - action_query_literature_detail
-#  - action_query_related_guide
-##  - action_query_disease_related_guide
-#  - action_query_guide_detail
-#  - action_query_collect
-#  - action_collect
-#
-#
-#templates:
-#  - utter_greet:
-#    - text: "你好"
-#  - utter_goodbye:
-#    - text: "拜拜"
-#  - utter_deny:
-#    - text: "抱歉，我好像听不懂你说的"
-#  - utter_ask_patient-name:
-#    - text: "请输入需要查询的患者名字"
-#  - utter_ask_medical-record-number:
-#    - text: "请输入患者的病历号"
-#  - utter_ask_hospital-number:
-#    - text: "请输入患者的住院号"
-#  - utter_ask_department:
-#    - text: "请输入患者的科室"
-#  - utter_ask_admission-time:
-#    - text: "请输入患者的住院时间"
-#  - utter_ask_bed-number:
-#    - text: "请输入患者的床号"
-#  - utter_ask_inspection-name:
-#    - text: "请输入需要查询的检查报告"
-#  - utter_ask_laboratory-name:
-#    - text: "请输入需要查询的检验报告"
-#  - utter_ask_laboratory-indicator:
-#    - text: "请输入需要查询的检验指标"
-#  - utter_ask_order-name:
-#    - text: "请输入需要查询的医嘱类型"
-#  - utter_ask_disease-name:
-#    - text: "请输入需要查询的疾病诊断"
-#  - utter_ask_literature-name:
-#    - text: "请输入需要查询的文献标题"
-#  - utter_ask_guide-name:
-#    - text: "请输入需要查询的临床指南标题"
-#  - utter_report_patient_info:
-#    - text: "{matches}"
-#  - utter_report_patient_emr:
-#    - text: "{matches}"
-#  - utter_report_patient_inspection_report:
-#    - text: "{matches}"
-#  - utter_report_patient_laboratory_report:
-#    - text: "{matches}"
-#  - utter_report_patient_abnormal:
-#    - text: "{matches}"
-#  - utter_report_patient_Medical_order:
-#    - text: "{matches}"
-#  - utter_report_patient_similar_patient:
-#    - text: "{matches}"
-#  - utter_report_disease_related_patient:
-#    - text: "{matches}"
-#  - utter_report_patient_detail:
-#    - text: "{matches}"
-#  - utter_report_patient_related_literature:
-#    - text: "{matches}"
-#  - utter_report_disease_related_literature:
-#    - text: "{matches}"
-#  - utter_report_literature_detail:
-#    - text: "{matches}"
-#  - utter_report_patient_related_guide:
-#    - text: "{matches}"
-#  - utter_report_disease_related_guide:
-#    - text: "{matches}"
-#  - utter_report_guide_detail:
-#    - text: "{matches}"
-#  - utter_report_collect:
-#    - text: "{matches}"
+  - utter_greet
+  - utter_goodbye
+  - utter_deny
+  - utter_ask_patient-name
+  - utter_ask_medical-record-number
+  - utter_ask_hospital-number
+  - utter_ask_department
+  - utter_ask_admission-time
+  - utter_ask_bed-number
+  - utter_ask_inspection-name
+  - utter_ask_laboratory-name
+  - utter_ask_laboratory-indicator
+  - utter_ask_order-name
+  - utter_ask_disease-name
+  - utter_ask_literature-name
+  - utter_ask_guide-name
+  - utter_slots_values
+  - utter_noworries
 
-
-
+forms:
+  - request_form
