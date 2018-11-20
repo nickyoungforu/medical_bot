@@ -18,13 +18,32 @@ class Action_Total(FormAction):
 
     @staticmethod
     def required_slots(tracker):
+        # slots = set([k for k, v in tracker.slots if v])
+        # if tracker.latest_message['intent'] == 'request_patient_info':
+        #     if slots.issubset({"patient-name", "admission-time"}):
+        #         return ["patient-name", "admission-time"]
+        #     elif slots.issubset({"department", "admission-time", "bed-number"}):
+        #         return ["department", "admission-time", "bed-number"]
         return ["patient-name", "admission-time"]
 
     def slot_mappings(self):
-        return {"patient-name": self.from_entity(entity="patient-name",
-                                            ),
-                "admission-time": self.from_entity(entity="admission-time",
-                                                ),}
+        return {"patient-name": self.from_entity(entity="patient-name",),
+                "admission-time": self.from_entity(entity="admission-time", ),
+                }
+        # return {"patient-name": self.from_entity(entity="patient-name",),
+        #         "medical-record-number": self.from_entity(entity="medical-record-number",),
+        #         "hospital-number": self.from_entity(entity="hospital-number", ),
+        #         "department": self.from_entity(entity="department", ),
+        #         "admission-time": self.from_entity(entity="admission-time", ),
+        #         "bed-number": self.from_entity(entity="bed-number", ),
+        #         "inspection-name": self.from_entity(entity="inspection-name", ),
+        #         "inspection-time": self.from_entity(entity="inspection-time", ),
+        #         "laboratory-indicator": self.from_entity(entity="laboratory-indicator", ),
+        #         "order-name": self.from_entity(entity="order-name", ),
+        #         "disease-name": self.from_entity(entity="disease-name", ),
+        #         "literature-name": self.from_entity(entity="literature-name", ),
+        #         "guide-name": self.from_entity(entity="guide-name", ),
+        #         }
 
 
     def validate(self, dispatcher, tracker, domain):
@@ -72,33 +91,7 @@ class Action_Total(FormAction):
             after all required slots are filled"""
 
         # utter submit template
-        dispatcher.utter_template('utter_slots_values', tracker)
-        return []
+        dispatcher.utter_template('utter_submit', tracker)
         # return [Restarted()]
-
-    def run(self, dispatcher, tracker, domain):
-
-        # activate the form
-        events = self._activate_if_required(tracker)
-        # validate user input
-        events.extend(self._validate_if_required(dispatcher, tracker, domain))
-
-        # create temp tracker with populated slots from `validate` method
-        temp_tracker = tracker.copy()
-        for e in events:
-            if e['event'] == 'slot':
-                temp_tracker.slots[e["name"]] = e["value"]
-
-        next_slot_events = self.request_next_slot(dispatcher, temp_tracker,
-                                                  domain)
-        if next_slot_events is not None:
-            # request next slot
-            events.extend(next_slot_events)
-        else:
-            # there is nothing more to request, so we can submit
-            events.extend(self.submit(dispatcher, temp_tracker, domain))
-            # deactivate the form after submission
-            events.extend(self._deactivate())
-            events.extend([Restarted()])
-
-        return events
+        # 若在此restart response的event执行后，预测后续action时,tracker已空
+        return []

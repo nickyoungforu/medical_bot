@@ -114,6 +114,8 @@ templates:
     - text: "查询结果:\n
              - patient-name: {patient-name}\n
              - admission-time: {admission-time}\n"
+  utter_submit:
+    - text: "slots filled"
   utter_noworries:
     - text: "end"
 
@@ -136,6 +138,7 @@ actions:
   - utter_ask_guide-name
   - utter_slots_values
   - utter_noworries
+  - utter_submit
 
 forms:
   - request_form
