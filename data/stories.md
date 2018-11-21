@@ -4,4 +4,5 @@
     - form{"name": "request_form"}
     - form{"name": null}
     - utter_slots_values
+    - action_restart
 

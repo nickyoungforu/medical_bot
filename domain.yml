@@ -3,19 +3,32 @@ intents:
   - goodbye
   - deny
   - inform
-  - request_patient_info
-  - request_patient_emr
-  - request_patient_inspection_report
-  - request_patient_laboratory_report
-  - request_patient_abnormal
-  - request_patient_Medical_order
-  - request_similar_patient
-  - request_patient_detail
-  - request_related_literature
-  - request_literature_detail
-  - request_related_guide
-  - request_guide_detail
-  - request_collect
+  - request_patient_info:
+      use_entities: false
+  - request_patient_emr:
+      use_entities: false
+  - request_patient_inspection_report:
+      use_entities: false
+  - request_patient_laboratory_report:
+      use_entities: false
+  - request_patient_abnormal:
+      use_entities: false
+  - request_patient_Medical_order:
+      use_entities: false
+  - request_similar_patient:
+      use_entities: false
+  - request_patient_detail:
+      use_entities: false
+  - request_related_literature:
+      use_entities: false
+  - request_literature_detail:
+      use_entities: false
+  - request_related_guide:
+      use_entities: false
+  - request_guide_detail:
+      use_entities: false
+  - request_collect:
+      use_entities: false
 
 
 slots:

@@ -18,32 +18,45 @@ class Action_Total(FormAction):
 
     @staticmethod
     def required_slots(tracker):
-        # slots = set([k for k, v in tracker.slots if v])
-        # if tracker.latest_message['intent'] == 'request_patient_info':
-        #     if slots.issubset({"patient-name", "admission-time"}):
-        #         return ["patient-name", "admission-time"]
-        #     elif slots.issubset({"department", "admission-time", "bed-number"}):
-        #         return ["department", "admission-time", "bed-number"]
-        return ["patient-name", "admission-time"]
+        slots = set([k for k, v in tracker.slots.items()])
+        # a = tracker.latest_message.get('intent')['name']
+        # # return ["patient-name", "admission-time"]
+        # if tracker.get_slot('patient-name') == 'kk':
+        #     return ["patient-name", "admission-time"]
+        # else:
+        #     return ["patient-name", "admission-time"]
+        if tracker.latest_message.get('intent')['name'] == 'request_patient_info':
+            last_entity = tracker.latest_message.get('entities')
+            if last_entity:
+                if set(last_entity[0]['entity']).issubset({"department", "admission-time", "bed-number"}):
+            # if slots.issubset({"department", "admission-time", "bed-number"}):
+                    return ["department", "admission-time", "bed-number"]
+                else:
+                    return ["patient-name", "admission-time"]
+            else:
+                return ["patient-name", "admission-time"]
+        else:
+            return ["patient-name", "admission-time"]
+        # return ["patient-name", "admission-time"]
 
     def slot_mappings(self):
-        return {"patient-name": self.from_entity(entity="patient-name",),
-                "admission-time": self.from_entity(entity="admission-time", ),
-                }
         # return {"patient-name": self.from_entity(entity="patient-name",),
-        #         "medical-record-number": self.from_entity(entity="medical-record-number",),
-        #         "hospital-number": self.from_entity(entity="hospital-number", ),
-        #         "department": self.from_entity(entity="department", ),
         #         "admission-time": self.from_entity(entity="admission-time", ),
-        #         "bed-number": self.from_entity(entity="bed-number", ),
-        #         "inspection-name": self.from_entity(entity="inspection-name", ),
-        #         "inspection-time": self.from_entity(entity="inspection-time", ),
-        #         "laboratory-indicator": self.from_entity(entity="laboratory-indicator", ),
-        #         "order-name": self.from_entity(entity="order-name", ),
-        #         "disease-name": self.from_entity(entity="disease-name", ),
-        #         "literature-name": self.from_entity(entity="literature-name", ),
-        #         "guide-name": self.from_entity(entity="guide-name", ),
         #         }
+        return {"patient-name": self.from_entity(entity="patient-name",),
+                "medical-record-number": self.from_entity(entity="medical-record-number",),
+                "hospital-number": self.from_entity(entity="hospital-number", ),
+                "department": self.from_entity(entity="department", ),
+                "admission-time": self.from_entity(entity="admission-time", ),
+                "bed-number": self.from_entity(entity="bed-number", ),
+                "inspection-name": self.from_entity(entity="inspection-name", ),
+                "inspection-time": self.from_entity(entity="inspection-time", ),
+                "laboratory-indicator": self.from_entity(entity="laboratory-indicator", ),
+                "order-name": self.from_entity(entity="order-name", ),
+                "disease-name": self.from_entity(entity="disease-name", ),
+                "literature-name": self.from_entity(entity="literature-name", ),
+                "guide-name": self.from_entity(entity="guide-name", ),
+                }
 
 
     def validate(self, dispatcher, tracker, domain):
