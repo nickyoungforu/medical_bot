@@ -11,6 +11,8 @@ intents:
       use_entities: false
   - request_patient_laboratory_report:
       use_entities: false
+  - request_patient_laboratory_indicator:
+      use_entities: false
   - request_patient_abnormal:
       use_entities: false
   - request_patient_Medical_order:
@@ -126,7 +128,16 @@ templates:
   utter_slots_values:
     - text: "查询结果:\n
              - patient-name: {patient-name}\n
-             - admission-time: {admission-time}\n"
+             - medical-record-number: {medical-record-number}\n
+             - hospital-number: {hospital-number}\n
+             - department: {department}\n
+             - admission-time: {admission-time}\n
+             - bed-number: {bed-number}\n
+             - inspection-name: {inspection-name}\n
+             - inspection-time: {inspection-time}\n
+             - laboratory-indicator: {laboratory-indicator}\n
+             - order-name: {order-name}\n
+             - disease-name: {disease-name}\n"
   utter_submit:
     - text: "slots filled"
   utter_noworries:
