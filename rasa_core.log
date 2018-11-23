@@ -22395,3 +22395,2728 @@ Predicted next action 'action_restart' with prob 1.00.
 Action 'action_restart' ended with events '['Restarted()']'
 Predicted next action 'action_listen' with prob 1.00.
 Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-zh'.
+/home/nick/anaconda3/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.783 seconds.
+Prefix dict has been built succesfully.
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '张三，患者信息' with intent '{'name': 'request_patient_info', 'confidence': 0.9937456657471434}' and entities '[{'start': 0, 'end': 3, 'value': '张三 ，', 'entity': 'patient-name', 'confidence': 0.3926240973355964, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: patient-name, value: 张三 ，)', 'SlotSet(key: requested_slot, value: admission-time)']'
+Bot utterance 'BotUttered(text: 请输入患者的住院时间, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '2016-6-9' with intent '{'name': 'inform', 'confidence': 0.984081890590405}' and entities '[{'start': 0, 'end': 8, 'value': '2016 - 6 - 9', 'entity': 'admission-time', 'confidence': 0.9863290430687551, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 9 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: 张三 ，
+	requested_slot: admission-time
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Failed to run custom action 'request_form'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: Internal Server Error for url: http://localhost:5055/webhook
+Encountered an exception while running action 'request_form'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'request_form' ended with events '[]'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-zh'.
+/home/nick/anaconda3/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.815 seconds.
+Prefix dict has been built succesfully.
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '张三，患者信息' with intent '{'name': 'request_patient_info', 'confidence': 0.9937456657471434}' and entities '[{'start': 0, 'end': 3, 'value': '张三 ，', 'entity': 'patient-name', 'confidence': 0.3926240973355964, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: patient-name, value: 张三 ，)', 'SlotSet(key: requested_slot, value: admission-time)']'
+Bot utterance 'BotUttered(text: 请输入患者的住院时间, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '2016-9-9' with intent '{'name': 'inform', 'confidence': 0.9866250504290532}' and entities '[{'start': 0, 'end': 8, 'value': '2016 - 9 - 9', 'entity': 'admission-time', 'confidence': 0.994414711999626, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 9 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: 张三 ，
+	requested_slot: admission-time
+Current tracker state [None, None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['SlotSet(key: admission-time, value: 2016 - 9 - 9)', 'Form(None)', 'SlotSet(key: requested_slot, value: None)']'
+Bot utterance 'BotUttered(text: slots filled, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_info': 1.0, 'prev_request_form': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: 张三 ，
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: 2016 - 9 - 9
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: None
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_info': 1.0, 'prev_request_form': 1.0}, {'intent_request_patient_info': 1.0, 'prev_utter_slots_values': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Inconsistent BILOU tagging found, B- tag, L- tag pair encloses multiple entity classes.i.e. [B-a, I-b, L-a] instead of [B-a, I-a, L-a].
+Assuming B- class is correct.
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '张三，入院时间：2016-9-9，信息' with intent '{'name': 'inform', 'confidence': 0.2875547118522803}' and entities '[{'start': 0, 'end': 3, 'value': '张三 ，', 'entity': 'disease-name', 'confidence': 0.36554228541044076, 'extractor': 'ner_crf'}, {'start': 8, 'end': 16, 'value': '2016 - 9 - 9', 'entity': 'admission-time', 'confidence': 0.9273165421336765, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 20 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+NLU confidence 0.2875547118522803 is lower than NLU threshold 0.3. Predicting fallback action: action_default_fallback
+Current tracker state [None, None, None, {}, {'intent_inform': 1.0, 'entity_disease-name': 1.0, 'entity_admission-time': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Bot utterance 'BotUttered(text: 抱歉，我好像听不懂你说的, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.824133767863173}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'admission-time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 25 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: patient-name, value: 郝月兰)', 'SlotSet(key: admission-time, value: 2018 - 6 - 28)', 'SlotSet(key: requested_slot, value: inspection-time)']'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.824133767863173}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'admission-time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 32 events
+Current slot values: 
+	admission-time: 2018 - 6 - 28
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: 郝月兰
+	requested_slot: inspection-time
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['SlotSet(key: patient-name, value: 郝月兰)', 'SlotSet(key: admission-time, value: 2018 - 6 - 28)', 'SlotSet(key: requested_slot, value: inspection-time)']'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.824133767863173}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'admission-time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 38 events
+Current slot values: 
+	admission-time: 2018 - 6 - 28
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: 郝月兰
+	requested_slot: inspection-time
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Encountered an exception while running action 'request_form'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+HTTPConnectionPool(host='localhost', port=5055): Read timed out. (read timeout=300)
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/nick/anaconda3/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/home/nick/anaconda3/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/home/nick/anaconda3/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/home/nick/anaconda3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 389, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 309, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=5055): Read timed out. (read timeout=300)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/actions/action.py", line 327, in run
+    json=json, method="post", timeout=DEFAULT_REQUEST_TIMEOUT)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/utils.py", line 748, in request
+    **kwargs)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='localhost', port=5055): Read timed out. (read timeout=300)
+Action 'request_form' ended with events '[]'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-zh'.
+/home/nick/anaconda3/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.791 seconds.
+Prefix dict has been built succesfully.
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.824133767863173}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'admission-time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Failed to run custom action 'request_form'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: Internal Server Error for url: http://localhost:5055/webhook
+Encountered an exception while running action 'request_form'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'request_form' ended with events '[]'
+Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}, {'prev_request_form': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: None
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: None
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: None
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}, {'prev_request_form': 1.0, 'intent_request_patient_laboratory_report': 1.0}, {'prev_utter_slots_values': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.824133767863173}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'admission-time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 9 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: patient-name, value: 郝月兰)', 'SlotSet(key: admission-time, value: 2018 - 6 - 28)', 'SlotSet(key: requested_slot, value: inspection-time)']'
+Bot utterance 'BotUttered(text: 请输入需要查询的患者检验时间, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '2016-9-9' with intent '{'name': 'inform', 'confidence': 0.9866250504290532}' and entities '[{'start': 0, 'end': 8, 'value': '2016 - 9 - 9', 'entity': 'admission-time', 'confidence': 0.994414711999626, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 17 events
+Current slot values: 
+	admission-time: 2018 - 6 - 28
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: 郝月兰
+	requested_slot: inspection-time
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['SlotSet(key: admission-time, value: 2016 - 9 - 9)', 'SlotSet(key: requested_slot, value: inspection-time)']'
+Bot utterance 'BotUttered(text: 请输入需要查询的患者检验时间, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '2016-9-9' with intent '{'name': 'inform', 'confidence': 0.9866250504290532}' and entities '[{'start': 0, 'end': 8, 'value': '2016 - 9 - 9', 'entity': 'admission-time', 'confidence': 0.994414711999626, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 23 events
+Current slot values: 
+	admission-time: 2016 - 9 - 9
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: 郝月兰
+	requested_slot: inspection-time
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['SlotSet(key: admission-time, value: 2016 - 9 - 9)', 'SlotSet(key: requested_slot, value: inspection-time)']'
+Bot utterance 'BotUttered(text: 请输入需要查询的患者检验时间, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-zh'.
+/home/nick/anaconda3/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.810 seconds.
+Prefix dict has been built succesfully.
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.8275904645799641}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: patient-name, value: 郝月兰)', 'SlotSet(key: requested_slot, value: admission-time)']'
+Bot utterance 'BotUttered(text: 请输入患者的住院时间, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '2016-9-9' with intent '{'name': 'inform', 'confidence': 0.9860908528528824}' and entities '[{'start': 0, 'end': 8, 'value': '2016 - 9 - 9', 'entity': 'time', 'confidence': 0.994414711999626, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 9 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: 郝月兰
+	requested_slot: admission-time
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['SlotSet(key: admission-time, value: 2016 - 9 - 9)', 'SlotSet(key: requested_slot, value: inspection-time)']'
+Bot utterance 'BotUttered(text: 请输入需要查询的患者检验时间, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '2016-9-9' with intent '{'name': 'inform', 'confidence': 0.9860908528528824}' and entities '[{'start': 0, 'end': 8, 'value': '2016 - 9 - 9', 'entity': 'time', 'confidence': 0.994414711999626, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 15 events
+Current slot values: 
+	admission-time: 2016 - 9 - 9
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: 郝月兰
+	requested_slot: inspection-time
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['SlotSet(key: inspection-time, value: 2016 - 9 - 9)', 'Form(None)', 'SlotSet(key: requested_slot, value: None)']'
+Bot utterance 'BotUttered(text: slots filled, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}, {'prev_request_form': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: 郝月兰
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: 2016 - 9 - 9
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: 2016 - 9 - 9
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}, {'prev_request_form': 1.0, 'intent_request_patient_laboratory_report': 1.0}, {'prev_utter_slots_values': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 26 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+NLU confidence 0.0 is lower than NLU threshold 0.3. Predicting fallback action: action_default_fallback
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Bot utterance 'BotUttered(text: 抱歉，我好像听不懂你说的, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 31 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+NLU confidence 0.0 is lower than NLU threshold 0.3. Predicting fallback action: action_default_fallback
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Bot utterance 'BotUttered(text: 抱歉，我好像听不懂你说的, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 36 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+NLU confidence 0.0 is lower than NLU threshold 0.3. Predicting fallback action: action_default_fallback
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Bot utterance 'BotUttered(text: 抱歉，我好像听不懂你说的, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 41 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+NLU confidence 0.0 is lower than NLU threshold 0.3. Predicting fallback action: action_default_fallback
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Bot utterance 'BotUttered(text: 抱歉，我好像听不懂你说的, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.8275904645799641}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 46 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: patient-name, value: 郝月兰)', 'SlotSet(key: requested_slot, value: admission-time)']'
+Bot utterance 'BotUttered(text: 请输入患者的住院时间, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '2016-6-6' with intent '{'name': 'inform', 'confidence': 0.9803667300863358}' and entities '[{'start': 0, 'end': 8, 'value': '2016 - 6 - 6', 'entity': 'time', 'confidence': 0.9881227141447438, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 53 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: 郝月兰
+	requested_slot: admission-time
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['SlotSet(key: admission-time, value: 2016 - 6 - 6)', 'SlotSet(key: requested_slot, value: inspection-time)']'
+Bot utterance 'BotUttered(text: 请输入需要查询的患者检验时间, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '2016-9-9' with intent '{'name': 'inform', 'confidence': 0.9860908528528824}' and entities '[{'start': 0, 'end': 8, 'value': '2016 - 9 - 9', 'entity': 'time', 'confidence': 0.994414711999626, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 59 events
+Current slot values: 
+	admission-time: 2016 - 6 - 6
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: 郝月兰
+	requested_slot: inspection-time
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['SlotSet(key: inspection-time, value: 2016 - 9 - 9)', 'Form(None)', 'SlotSet(key: requested_slot, value: None)']'
+Bot utterance 'BotUttered(text: slots filled, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}, {'prev_request_form': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: 郝月兰
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: 2016 - 6 - 6
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: 2016 - 9 - 9
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}, {'prev_request_form': 1.0, 'intent_request_patient_laboratory_report': 1.0}, {'prev_utter_slots_values': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.8275904645799641}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 70 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Encountered an exception while running action 'request_form'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+HTTPConnectionPool(host='localhost', port=5055): Read timed out. (read timeout=300)
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/nick/anaconda3/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/home/nick/anaconda3/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/home/nick/anaconda3/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/home/nick/anaconda3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 389, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 309, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=5055): Read timed out. (read timeout=300)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/actions/action.py", line 327, in run
+    json=json, method="post", timeout=DEFAULT_REQUEST_TIMEOUT)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/utils.py", line 748, in request
+    **kwargs)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='localhost', port=5055): Read timed out. (read timeout=300)
+Action 'request_form' ended with events '[]'
+Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}, {'prev_request_form': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: None
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: None
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: None
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}, {'prev_request_form': 1.0, 'intent_request_patient_laboratory_report': 1.0}, {'prev_utter_slots_values': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-zh'.
+/home/nick/anaconda3/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.811 seconds.
+Prefix dict has been built succesfully.
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.8275904645799641}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Encountered an exception while running action 'request_form'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+HTTPConnectionPool(host='localhost', port=5055): Read timed out. (read timeout=300)
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/nick/anaconda3/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/home/nick/anaconda3/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/home/nick/anaconda3/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/home/nick/anaconda3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 389, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 309, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=5055): Read timed out. (read timeout=300)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/actions/action.py", line 327, in run
+    json=json, method="post", timeout=DEFAULT_REQUEST_TIMEOUT)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/utils.py", line 748, in request
+    **kwargs)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='localhost', port=5055): Read timed out. (read timeout=300)
+Action 'request_form' ended with events '[]'
+Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: None
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: None
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: None
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_utter_slots_values': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.8275904645799641}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 9 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: patient-name, value: 郝月兰)', 'SlotSet(key: requested_slot, value: admission-time)']'
+Bot utterance 'BotUttered(text: 请输入患者的住院时间, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_laboratory_report': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-zh'.
+/home/nick/anaconda3/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.798 seconds.
+Prefix dict has been built succesfully.
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.8275904645799641}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Failed to run custom action 'request_form'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: Internal Server Error for url: http://localhost:5055/webhook
+Encountered an exception while running action 'request_form'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'request_form' ended with events '[]'
+Current tracker state [None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: None
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: None
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: None
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_utter_slots_values': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.8275904645799641}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 9 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: patient-name, value: 郝月兰)', 'SlotSet(key: admission-time, value: 2018 - 6 - 28)', 'SlotSet(key: inspection-time, value: 2018 - 6 - 28)', 'Form(None)', 'SlotSet(key: requested_slot, value: None)']'
+Bot utterance 'BotUttered(text: slots filled, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: 郝月兰
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: 2018 - 6 - 28
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: 2018 - 6 - 28
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_utter_slots_values': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '患者信息' with intent '{'name': 'request_patient_info', 'confidence': 0.9999998708762269}' and entities '[]'
+Logged UserUtterance - tracker now has 23 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: requested_slot, value: patient-name)']'
+Bot utterance 'BotUttered(text: 请输入需要查询的患者名字, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '张三' with intent '{'name': 'request_patient_Medical_order', 'confidence': 0.24736754029099495}' and entities '[{'start': 0, 'end': 2, 'value': '张三', 'entity': 'patient-name', 'confidence': 0.7890780993761182, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 29 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: patient-name
+NLU confidence 0.24736754029099495 is lower than NLU threshold 0.3. Predicting fallback action: action_default_fallback
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['SlotSet(key: patient-name, value: 张三)', 'SlotSet(key: requested_slot, value: admission-time)']'
+Bot utterance 'BotUttered(text: 请输入患者的住院时间, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+NLU confidence 0.24736754029099495 is lower than NLU threshold 0.3. Predicting fallback action: action_default_fallback
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '2016-9-9' with intent '{'name': 'inform', 'confidence': 0.9860908528528824}' and entities '[{'start': 0, 'end': 8, 'value': '2016 - 9 - 9', 'entity': 'time', 'confidence': 0.994414711999626, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 35 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: 张三
+	requested_slot: admission-time
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['SlotSet(key: admission-time, value: 2016 - 9 - 9)', 'Form(None)', 'SlotSet(key: requested_slot, value: None)']'
+Bot utterance 'BotUttered(text: slots filled, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_info': 1.0}, {'prev_request_form': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: 张三
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: 2016 - 9 - 9
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: None
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_request_patient_info': 1.0}, {'prev_request_form': 1.0, 'intent_request_patient_info': 1.0}, {'prev_utter_slots_values': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.8275904645799641}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 46 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: patient-name, value: 郝月兰)', 'SlotSet(key: admission-time, value: 2018 - 6 - 28)', 'SlotSet(key: inspection-time, value: 2018 - 6 - 28)', 'Form(None)', 'SlotSet(key: requested_slot, value: None)']'
+Bot utterance 'BotUttered(text: slots filled, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: 郝月兰
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: 2018 - 6 - 28
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: 2018 - 6 - 28
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_utter_slots_values': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '张三，患者信息' with intent '{'name': 'request_patient_info', 'confidence': 0.9937719311317313}' and entities '[{'start': 0, 'end': 3, 'value': '张三 ，', 'entity': 'patient-name', 'confidence': 0.3926240973355964, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 60 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: patient-name, value: 张三 ，)', 'SlotSet(key: requested_slot, value: admission-time)']'
+Bot utterance 'BotUttered(text: 请输入患者的住院时间, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '2016-9-9' with intent '{'name': 'inform', 'confidence': 0.9860908528528824}' and entities '[{'start': 0, 'end': 8, 'value': '2016 - 9 - 9', 'entity': 'time', 'confidence': 0.994414711999626, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 67 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: 张三 ，
+	requested_slot: admission-time
+Current tracker state [None, None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['SlotSet(key: admission-time, value: 2016 - 9 - 9)', 'Form(None)', 'SlotSet(key: requested_slot, value: None)']'
+Bot utterance 'BotUttered(text: slots filled, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}, {'prev_request_form': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: 张三 ，
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: 2016 - 9 - 9
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: None
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}, {'prev_request_form': 1.0, 'intent_request_patient_info': 1.0}, {'prev_utter_slots_values': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '张三，患者信息' with intent '{'name': 'request_patient_info', 'confidence': 0.9937719311317313}' and entities '[{'start': 0, 'end': 3, 'value': '张三 ，', 'entity': 'patient-name', 'confidence': 0.3926240973355964, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 78 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: patient-name, value: 张三 ，)', 'SlotSet(key: requested_slot, value: admission-time)']'
+Bot utterance 'BotUttered(text: 请输入患者的住院时间, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '2016-9-9' with intent '{'name': 'inform', 'confidence': 0.9860908528528824}' and entities '[{'start': 0, 'end': 8, 'value': '2016 - 9 - 9', 'entity': 'time', 'confidence': 0.994414711999626, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 85 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: 张三 ，
+	requested_slot: admission-time
+Current tracker state [None, None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['SlotSet(key: admission-time, value: 2016 - 9 - 9)', 'Form(None)', 'SlotSet(key: requested_slot, value: None)']'
+Bot utterance 'BotUttered(text: slots filled, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}, {'prev_request_form': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: 张三 ，
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: 2016 - 9 - 9
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: None
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}, {'prev_request_form': 1.0, 'intent_request_patient_info': 1.0}, {'prev_utter_slots_values': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.8275904645799641}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 96 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: patient-name, value: 郝月兰)', 'SlotSet(key: admission-time, value: 2018 - 6 - 28)', 'SlotSet(key: inspection-time, value: 2018 - 6 - 28)', 'Form(None)', 'SlotSet(key: requested_slot, value: None)']'
+Bot utterance 'BotUttered(text: slots filled, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: 郝月兰
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: 2018 - 6 - 28
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: 2018 - 6 - 28
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_utter_slots_values': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '张三，患者信息' with intent '{'name': 'request_patient_info', 'confidence': 0.9937719311317313}' and entities '[{'start': 0, 'end': 3, 'value': '张三 ，', 'entity': 'patient-name', 'confidence': 0.3926240973355964, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 110 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: patient-name, value: 张三 ，)', 'SlotSet(key: requested_slot, value: admission-time)']'
+Bot utterance 'BotUttered(text: 请输入患者的住院时间, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '张三' with intent '{'name': 'request_patient_Medical_order', 'confidence': 0.24736754029099495}' and entities '[{'start': 0, 'end': 2, 'value': '张三', 'entity': 'patient-name', 'confidence': 0.7890780993761182, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 117 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: 张三 ，
+	requested_slot: admission-time
+NLU confidence 0.24736754029099495 is lower than NLU threshold 0.3. Predicting fallback action: action_default_fallback
+Current tracker state [None, None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['SlotSet(key: patient-name, value: 张三)', 'SlotSet(key: requested_slot, value: admission-time)']'
+Bot utterance 'BotUttered(text: 请输入患者的住院时间, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+NLU confidence 0.24736754029099495 is lower than NLU threshold 0.3. Predicting fallback action: action_default_fallback
+Current tracker state [None, None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '2016-9-9' with intent '{'name': 'inform', 'confidence': 0.9860908528528824}' and entities '[{'start': 0, 'end': 8, 'value': '2016 - 9 - 9', 'entity': 'time', 'confidence': 0.994414711999626, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 123 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: 张三
+	requested_slot: admission-time
+Current tracker state [None, None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is an active form 'request_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['SlotSet(key: admission-time, value: 2016 - 9 - 9)', 'Form(None)', 'SlotSet(key: requested_slot, value: None)']'
+Bot utterance 'BotUttered(text: slots filled, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}, {'prev_request_form': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: 张三
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: 2016 - 9 - 9
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: None
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'intent_request_patient_info': 1.0, 'prev_action_listen': 1.0}, {'prev_request_form': 1.0, 'intent_request_patient_info': 1.0}, {'prev_utter_slots_values': 1.0, 'intent_request_patient_info': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.8275904645799641}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 134 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: patient-name, value: 郝月兰)', 'SlotSet(key: admission-time, value: 2018 - 6 - 28)', 'SlotSet(key: inspection-time, value: 2018 - 6 - 28)', 'Form(None)', 'SlotSet(key: requested_slot, value: None)']'
+Bot utterance 'BotUttered(text: slots filled, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: 郝月兰
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: 2018 - 6 - 28
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: 2018 - 6 - 28
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_utter_slots_values': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.8275904645799641}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 148 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: patient-name, value: 郝月兰)', 'SlotSet(key: admission-time, value: 2018 - 6 - 28)', 'SlotSet(key: inspection-time, value: 2018 - 6 - 28)', 'Form(None)', 'SlotSet(key: requested_slot, value: None)']'
+Bot utterance 'BotUttered(text: slots filled, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: 郝月兰
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: 2018 - 6 - 28
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: 2018 - 6 - 28
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_utter_slots_values': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.8275904645799641}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 162 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Failed to run custom action 'request_form'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: Internal Server Error for url: http://localhost:5055/webhook
+Encountered an exception while running action 'request_form'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'request_form' ended with events '[]'
+Current tracker state [None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: None
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: None
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: None
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_utter_slots_values': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 169 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+NLU confidence 0.0 is lower than NLU threshold 0.3. Predicting fallback action: action_default_fallback
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Bot utterance 'BotUttered(text: 抱歉，我好像听不懂你说的, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.8275904645799641}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 174 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Failed to run custom action 'request_form'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: Internal Server Error for url: http://localhost:5055/webhook
+Encountered an exception while running action 'request_form'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'request_form' ended with events '[]'
+Current tracker state [None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: None
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: None
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: None
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_utter_slots_values': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.8275904645799641}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 181 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Failed to run custom action 'request_form'. Action server responded with a non 200 status code of 500. Make sure your action server properly runs actions and returns a 200 once the action is executed. Error: 500 Server Error: Internal Server Error for url: http://localhost:5055/webhook
+Encountered an exception while running action 'request_form'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/actions/action.py", line 338, in run
+    response.raise_for_status()
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://localhost:5055/webhook
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/actions/action.py", line 358, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'request_form' ended with events '[]'
+Current tracker state [None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: None
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: None
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: None
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_utter_slots_values': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.8275904645799641}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 188 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Action 'request_form' ended with events '['Form(request_form)', 'SlotSet(key: patient-name, value: 郝月兰)', 'SlotSet(key: admission-time, value: 2018 - 6 - 28)', 'SlotSet(key: inspection-time, value: 2018 - 6 - 28)', 'Form(None)', 'SlotSet(key: requested_slot, value: None)']'
+Bot utterance 'BotUttered(text: slots filled, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: 郝月兰
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: 2018 - 6 - 28
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: 2018 - 6 - 28
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_utter_slots_values': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+/home/nick/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Received user message '我要查看郝月兰,入院时间为2018-6-28,检验报告' with intent '{'name': 'request_patient_laboratory_report', 'confidence': 0.8275904645799641}' and entities '[{'start': 4, 'end': 7, 'value': '郝月兰', 'entity': 'patient-name', 'confidence': 0.9604877931750931, 'extractor': 'ner_crf'}, {'start': 13, 'end': 22, 'value': '2018 - 6 - 28', 'entity': 'time', 'confidence': 0.903032260861581, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 202 events
+Current slot values: 
+	admission-time: None
+	bed-number: None
+	department: None
+	disease-name: None
+	guide-name: None
+	hospital-number: None
+	inspection-name: None
+	inspection-time: None
+	laboratory-indicator: None
+	literature-name: None
+	medical-record-number: None
+	order-name: None
+	patient-name: None
+	requested_slot: None
+Current tracker state [None, None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '23'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'request_form' with prob 1.00.
+Calling action endpoint to run action 'request_form'.
+Encountered an exception while running action 'request_form'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+HTTPConnectionPool(host='localhost', port=5055): Read timed out. (read timeout=300)
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/nick/anaconda3/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/home/nick/anaconda3/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/home/nick/anaconda3/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/home/nick/anaconda3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 389, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 309, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=5055): Read timed out. (read timeout=300)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/processor.py", line 351, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/actions/action.py", line 327, in run
+    json=json, method="post", timeout=DEFAULT_REQUEST_TIMEOUT)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/rasa_core/utils.py", line 748, in request
+    **kwargs)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/nick/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='localhost', port=5055): Read timed out. (read timeout=300)
+Action 'request_form' ended with events '[]'
+Current tracker state [None, None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}]
+There is a memorised next action '20'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_slots_values' with prob 1.00.
+Action 'utter_slots_values' ended with events '[]'
+Bot utterance 'BotUttered(text: 查询结果:
+ - patient-name: None
+ - medical-record-number: None
+ - hospital-number: None
+ - department: None
+ - admission-time: None
+ - bed-number: None
+ - inspection-name: None
+ - inspection-time: None
+ - laboratory-indicator: None
+ - order-name: None
+ - disease-name: None
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, {}, {'intent_request_patient_laboratory_report': 1.0, 'prev_action_listen': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_request_form': 1.0}, {'intent_request_patient_laboratory_report': 1.0, 'prev_utter_slots_values': 1.0}]
+There is a memorised next action '1'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_restart' with prob 1.00.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'

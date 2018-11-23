@@ -82,10 +82,9 @@ entities:
   - medical-record-number
   - hospital-number
   - department
-  - admission-time
+  - time
   - bed-number
   - inspection-name
-  - inspection-time
   - laboratory-indicator
   - order-name
   - disease-name
@@ -111,8 +110,8 @@ templates:
     - text: "请输入患者的床号"
   utter_ask_inspection-name:
     - text: "请输入需要查询的检查报告"
-  utter_ask_laboratory-name:
-    - text: "请输入需要查询的检验报告"
+  utter_ask_inspection-time:
+    - text: "请输入需要查询的患者检验时间"
   utter_ask_laboratory-indicator:
     - text: "请输入需要查询的检验指标"
   utter_ask_order-name:
@@ -154,7 +153,7 @@ actions:
   - utter_ask_admission-time
   - utter_ask_bed-number
   - utter_ask_inspection-name
-  - utter_ask_laboratory-name
+  - utter_ask_inspection-time
   - utter_ask_laboratory-indicator
   - utter_ask_order-name
   - utter_ask_disease-name

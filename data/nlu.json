@@ -363,7 +363,7 @@
       "start": 16,
       "end": 24,
       "value": "2017-6-9",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -501,7 +501,7 @@
       "start": 13,
       "end": 21,
       "value": "2016-6-8",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要查一下鲍正华,入院时间：2016-6-8,相关文献"
@@ -591,7 +591,7 @@
       "start": 8,
       "end": 17,
       "value": "2016-4-24",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "东兵,入院时间为2016-4-24,检查报告"
@@ -638,7 +638,7 @@
       "start": 9,
       "end": 17,
       "value": "2018-9-6",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "李景清,入院时间为2018-9-6,检验报告"
@@ -851,7 +851,7 @@
       "start": 16,
       "end": 24,
       "value": "2018-6-7",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -875,7 +875,7 @@
       "start": 16,
       "end": 25,
       "value": "2018-6-30",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 29,
@@ -916,7 +916,7 @@
       "start": 22,
       "end": 31,
       "value": "2016-5-12",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 35,
@@ -1139,7 +1139,7 @@
       "start": 13,
       "end": 21,
       "value": "2018-8-4",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 25,
@@ -1256,7 +1256,7 @@
       "start": 13,
       "end": 21,
       "value": "2016-5-2",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想看一下金函,入院时间为2016-5-2,相似患者"
@@ -1278,7 +1278,7 @@
       "start": 0,
       "end": 9,
       "value": "2018-1-31",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2018-1-31"
@@ -1420,7 +1420,7 @@
       "start": 9,
       "end": 18,
       "value": "2018-4-19",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "付慧芳,入院时间：2018-4-19,检查报告"
@@ -1438,7 +1438,7 @@
       "start": 12,
       "end": 20,
       "value": "2016-1-1",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要查找常利君,入院时间：2016-1-1,相似患者"
@@ -1537,7 +1537,7 @@
       "start": 9,
       "end": 18,
       "value": "2016-8-21",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "陈全意,入院时间：2016-8-21,检验报告"
@@ -1738,7 +1738,7 @@
       "start": 0,
       "end": 10,
       "value": "2018-11-13",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2018-11-13"
@@ -1773,7 +1773,7 @@
       "start": 20,
       "end": 29,
       "value": "2017-7-12",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 33,
@@ -1917,7 +1917,7 @@
       "start": 0,
       "end": 10,
       "value": "2016-11-13",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-11-13"
@@ -2052,7 +2052,7 @@
       "start": 12,
       "end": 22,
       "value": "2016-10-16",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查询郭冠群,入院时间为2016-10-16,相关文献"
@@ -2099,7 +2099,7 @@
       "start": 21,
       "end": 30,
       "value": "2018-6-30",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 34,
@@ -2220,7 +2220,7 @@
       "start": 9,
       "end": 18,
       "value": "2018-4-17",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "王昌容,入院时间为2018-4-17,电子病历"
@@ -2255,7 +2255,7 @@
       "start": 17,
       "end": 26,
       "value": "2016-3-24",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -2446,7 +2446,7 @@
       "start": 13,
       "end": 23,
       "value": "2016-11-15",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想看一下纪欣伟,入院时间为2016-11-15,检查报告"
@@ -2569,7 +2569,7 @@
       "start": 17,
       "end": 26,
       "value": "2017-10-8",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -2609,7 +2609,7 @@
       "start": 20,
       "end": 29,
       "value": "2016-2-11",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 33,
@@ -2633,7 +2633,7 @@
       "start": 8,
       "end": 17,
       "value": "2016-7-31",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "朴琳,入院时间：2016-7-31,相关文献"
@@ -2749,7 +2749,7 @@
       "start": 13,
       "end": 21,
       "value": "2017-3-3",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 25,
@@ -2802,7 +2802,7 @@
       "start": 13,
       "end": 22,
       "value": "2017-3-20",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查询谢永兵,入院时间：2017-3-20,检验报告"
@@ -2899,7 +2899,7 @@
       "start": 12,
       "end": 21,
       "value": "2018-5-11",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要看曹允春,入院时间为2018-5-11,电子病历"
@@ -2917,7 +2917,7 @@
       "start": 12,
       "end": 21,
       "value": "2016-8-10",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要查看崔甜甜,入院时间为2016-8-10,患者信息"
@@ -3053,7 +3053,7 @@
       "start": 11,
       "end": 20,
       "value": "2016-10-5",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要看沈国红,入院时间为2016-10-5,相关文献"
@@ -3137,7 +3137,7 @@
       "start": 13,
       "end": 23,
       "value": "2016-10-31",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -3310,7 +3310,7 @@
       "start": 15,
       "end": 23,
       "value": "2016-5-7",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -3413,7 +3413,7 @@
       "start": 0,
       "end": 10,
       "value": "2017-12-23",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2017-12-23"
@@ -3511,7 +3511,7 @@
       "start": 9,
       "end": 19,
       "value": "2018-12-13",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "刘天伦,入院时间为2018-12-13,检验报告"
@@ -3540,7 +3540,7 @@
       "start": 0,
       "end": 10,
       "value": "2018-10-25",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2018-10-25"
@@ -3602,7 +3602,7 @@
       "start": 15,
       "end": 24,
       "value": "2018-1-13",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -3626,7 +3626,7 @@
       "start": 12,
       "end": 20,
       "value": "2018-3-1",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要查询林晓郁,入院时间为2018-3-1,相关文献"
@@ -3703,7 +3703,7 @@
       "start": 19,
       "end": 28,
       "value": "2018-10-7",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -3761,7 +3761,7 @@
       "start": 13,
       "end": 22,
       "value": "2018-9-25",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要看一下郭继伟,入院时间为2018-9-25,异常指标"
@@ -3779,7 +3779,7 @@
       "start": 12,
       "end": 20,
       "value": "2017-6-9",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查找伯丹,入院时间：2017-6-9,电子病历"
@@ -3834,7 +3834,7 @@
       "start": 14,
       "end": 23,
       "value": "2018-5-12",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -3858,7 +3858,7 @@
       "start": 17,
       "end": 26,
       "value": "2016-11-5",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -3945,7 +3945,7 @@
       "start": 15,
       "end": 23,
       "value": "2018-2-9",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -4018,7 +4018,7 @@
       "start": 11,
       "end": 20,
       "value": "2017-9-26",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要看宫宝龙,入院时间为2017-9-26,检验报告"
@@ -4058,7 +4058,7 @@
       "start": 18,
       "end": 28,
       "value": "2016-12-21",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -4104,7 +4104,7 @@
       "start": 12,
       "end": 21,
       "value": "2018-9-19",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 25,
@@ -4235,7 +4235,7 @@
       "start": 12,
       "end": 22,
       "value": "2018-12-19",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -4270,7 +4270,7 @@
       "start": 13,
       "end": 23,
       "value": "2018-12-21",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查一下王马军,入院时间：2018-12-21,异常指标"
@@ -4300,7 +4300,7 @@
       "start": 15,
       "end": 23,
       "value": "2016-4-7",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -4392,7 +4392,7 @@
       "start": 13,
       "end": 22,
       "value": "2017-6-13",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要查一下张丽倩,入院时间：2017-6-13,检查报告"
@@ -4539,7 +4539,7 @@
       "start": 12,
       "end": 22,
       "value": "2018-10-13",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -4585,7 +4585,7 @@
       "start": 19,
       "end": 28,
       "value": "2016-9-18",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -4619,7 +4619,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-5-12",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要看一下靳力,入院时间：2016-5-12,异常指标"
@@ -4881,7 +4881,7 @@
       "start": 12,
       "end": 20,
       "value": "2016-4-6",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查看刘洪朴,入院时间：2016-4-6,检查报告"
@@ -4953,7 +4953,7 @@
       "start": 16,
       "end": 25,
       "value": "2018-8-19",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 29,
@@ -5073,7 +5073,7 @@
       "start": 11,
       "end": 21,
       "value": "2016-12-10",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查找程稳,入院时间为2016-12-10,相关文献"
@@ -5130,7 +5130,7 @@
       "start": 14,
       "end": 23,
       "value": "2017-7-12",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查一下荣黎黎,入院时间为2017-7-12,相似患者"
@@ -5209,7 +5209,7 @@
       "start": 11,
       "end": 20,
       "value": "2016-6-12",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要查郑云芳,入院时间为2016-6-12,检验报告"
@@ -5328,7 +5328,7 @@
       "start": 10,
       "end": 19,
       "value": "2016-7-14",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 23,
@@ -5369,7 +5369,7 @@
       "start": 16,
       "end": 26,
       "value": "2018-11-19",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -5405,7 +5405,7 @@
       "start": 15,
       "end": 24,
       "value": "2018-9-11",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -5439,7 +5439,7 @@
       "start": 17,
       "end": 26,
       "value": "2016-4-10",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -5549,7 +5549,7 @@
       "start": 0,
       "end": 9,
       "value": "2017-9-29",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2017-9-29"
@@ -5600,7 +5600,7 @@
       "start": 0,
       "end": 8,
       "value": "2016-5-2",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-5-2"
@@ -5679,7 +5679,7 @@
       "start": 19,
       "end": 27,
       "value": "2017-9-6",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 31,
@@ -5737,7 +5737,7 @@
       "start": 0,
       "end": 10,
       "value": "2016-10-14",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-10-14"
@@ -5789,7 +5789,7 @@
       "start": 16,
       "end": 25,
       "value": "2016-6-25",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 29,
@@ -5863,7 +5863,7 @@
       "start": 0,
       "end": 9,
       "value": "2017-8-29",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2017-8-29"
@@ -5886,7 +5886,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-2-22",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -5951,7 +5951,7 @@
       "start": 18,
       "end": 27,
       "value": "2018-8-14",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 31,
@@ -6048,7 +6048,7 @@
       "start": 17,
       "end": 26,
       "value": "2018-3-21",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -6110,7 +6110,7 @@
       "start": 13,
       "end": 23,
       "value": "2016-10-31",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -6173,7 +6173,7 @@
       "start": 14,
       "end": 22,
       "value": "2017-9-2",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想看一下罗金梅,入院时间为2017-9-2,检查报告"
@@ -6191,7 +6191,7 @@
       "start": 9,
       "end": 18,
       "value": "2016-1-13",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 22,
@@ -6215,7 +6215,7 @@
       "start": 13,
       "end": 23,
       "value": "2016-11-20",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -6249,7 +6249,7 @@
       "start": 9,
       "end": 17,
       "value": "2017-9-2",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "杨延宁,入院时间为2017-9-2,医嘱信息"
@@ -6291,7 +6291,7 @@
       "start": 11,
       "end": 20,
       "value": "2017-4-31",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查找诗尧,入院时间为2017-4-31,相关指南"
@@ -6363,7 +6363,7 @@
       "start": 10,
       "end": 19,
       "value": "2017-11-4",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 23,
@@ -6553,7 +6553,7 @@
       "start": 9,
       "end": 18,
       "value": "2017-6-23",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "崔子华,入院时间：2017-6-23,相似患者"
@@ -6702,7 +6702,7 @@
       "start": 11,
       "end": 19,
       "value": "2016-2-1",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要查询方荔,入院时间为2016-2-1,电子病历"
@@ -7120,7 +7120,7 @@
       "start": 8,
       "end": 17,
       "value": "2018-7-14",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "涂染,入院时间为2018-7-14,异常指标"
@@ -7202,7 +7202,7 @@
       "start": 13,
       "end": 22,
       "value": "2018-5-23",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查一下钟观秀,入院时间为2018-5-23,相关文献"
@@ -7242,7 +7242,7 @@
       "start": 16,
       "end": 25,
       "value": "2018-7-17",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 29,
@@ -7306,7 +7306,7 @@
       "start": 18,
       "end": 27,
       "value": "2018-8-11",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 31,
@@ -7425,7 +7425,7 @@
       "start": 14,
       "end": 23,
       "value": "2018-9-18",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查一下周耀斌,入院时间为2018-9-18,检查报告"
@@ -7482,7 +7482,7 @@
       "start": 16,
       "end": 25,
       "value": "2016-2-13",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 29,
@@ -7512,7 +7512,7 @@
       "start": 0,
       "end": 8,
       "value": "2016-9-5",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-9-5"
@@ -7649,7 +7649,7 @@
       "start": 0,
       "end": 9,
       "value": "2016-11-5",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-11-5"
@@ -7672,7 +7672,7 @@
       "start": 12,
       "end": 21,
       "value": "2018-2-22",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 25,
@@ -7886,7 +7886,7 @@
       "start": 15,
       "end": 24,
       "value": "2016-8-24",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -7959,7 +7959,7 @@
       "start": 14,
       "end": 23,
       "value": "2018-8-18",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查一下蒋亚君,入院时间为2018-8-18,相关指南"
@@ -8011,7 +8011,7 @@
       "start": 15,
       "end": 23,
       "value": "2016-7-4",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -8113,7 +8113,7 @@
       "start": 13,
       "end": 22,
       "value": "2018-11-3",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -8176,7 +8176,7 @@
       "start": 10,
       "end": 19,
       "value": "2018-7-21",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 23,
@@ -8200,7 +8200,7 @@
       "start": 18,
       "end": 28,
       "value": "2017-12-21",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -8248,7 +8248,7 @@
       "start": 16,
       "end": 25,
       "value": "2017-5-19",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 29,
@@ -8317,7 +8317,7 @@
       "start": 13,
       "end": 21,
       "value": "2017-1-9",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查询杨振和,入院时间为2017-1-9,异常指标"
@@ -8379,7 +8379,7 @@
       "start": 12,
       "end": 22,
       "value": "2016-11-14",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -8420,7 +8420,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-5-29",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -8573,7 +8573,7 @@
       "start": 20,
       "end": 29,
       "value": "2017-10-5",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 33,
@@ -8619,7 +8619,7 @@
       "start": 12,
       "end": 21,
       "value": "2017-11-4",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想看孙焕新,入院时间为2017-11-4,异常指标"
@@ -8642,7 +8642,7 @@
       "start": 14,
       "end": 22,
       "value": "2016-9-6",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -8705,7 +8705,7 @@
       "start": 19,
       "end": 29,
       "value": "2017-10-30",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 33,
@@ -8758,7 +8758,7 @@
       "start": 21,
       "end": 30,
       "value": "2018-11-2",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 34,
@@ -8782,7 +8782,7 @@
       "start": 12,
       "end": 21,
       "value": "2018-7-14",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要看梁志业,入院时间：2018-7-14,患者信息"
@@ -8884,7 +8884,7 @@
       "start": 0,
       "end": 9,
       "value": "2016-7-10",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-7-10"
@@ -8992,7 +8992,7 @@
       "start": 12,
       "end": 21,
       "value": "2017-10-6",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查询贾致远,入院时间为2017-10-6,异常指标"
@@ -9039,7 +9039,7 @@
       "start": 18,
       "end": 27,
       "value": "2018-4-31",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 31,
@@ -9068,7 +9068,7 @@
       "start": 12,
       "end": 21,
       "value": "2017-11-6",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想看孙国孝,入院时间：2017-11-6,医嘱信息"
@@ -9121,7 +9121,7 @@
       "start": 13,
       "end": 21,
       "value": "2016-8-1",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查看吴腾凰,入院时间：2016-8-1,检查报告"
@@ -9191,7 +9191,7 @@
       "start": 0,
       "end": 9,
       "value": "2018-3-27",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2018-3-27"
@@ -9255,7 +9255,7 @@
       "start": 11,
       "end": 21,
       "value": "2018-12-25",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查看吴好,入院时间：2018-12-25,电子病历"
@@ -9363,7 +9363,7 @@
       "start": 13,
       "end": 22,
       "value": "2017-1-27",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查一下董玉梅,入院时间：2017-1-27,相关指南"
@@ -9451,7 +9451,7 @@
       "start": 13,
       "end": 23,
       "value": "2018-10-18",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -9551,7 +9551,7 @@
       "start": 14,
       "end": 24,
       "value": "2016-10-14",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查一下梁灼林,入院时间为2016-10-14,患者信息"
@@ -9670,7 +9670,7 @@
       "start": 14,
       "end": 24,
       "value": "2017-11-20",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要看一下杜以明,入院时间为2017-11-20,异常指标"
@@ -9693,7 +9693,7 @@
       "start": 14,
       "end": 23,
       "value": "2018-4-26",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查一下张同泽,入院时间为2018-4-26,检验报告"
@@ -9716,7 +9716,7 @@
       "start": 16,
       "end": 24,
       "value": "2018-6-3",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -9739,7 +9739,7 @@
       "start": 0,
       "end": 8,
       "value": "2016-7-9",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-7-9"
@@ -9768,7 +9768,7 @@
       "start": 0,
       "end": 9,
       "value": "2016-12-4",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-12-4"
@@ -9895,7 +9895,7 @@
       "start": 18,
       "end": 27,
       "value": "2016-4-17",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 31,
@@ -9919,7 +9919,7 @@
       "start": 13,
       "end": 22,
       "value": "2017-8-25",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -9967,7 +9967,7 @@
       "start": 19,
       "end": 28,
       "value": "2018-7-20",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -10001,7 +10001,7 @@
       "start": 13,
       "end": 22,
       "value": "2017-9-28",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查询孟海萍,入院时间：2017-9-28,检验报告"
@@ -10019,7 +10019,7 @@
       "start": 19,
       "end": 28,
       "value": "2016-10-6",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -10043,7 +10043,7 @@
       "start": 21,
       "end": 29,
       "value": "2018-2-6",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 33,
@@ -10093,7 +10093,7 @@
       "start": 0,
       "end": 9,
       "value": "2016-3-29",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-3-29"
@@ -10274,7 +10274,7 @@
       "start": 13,
       "end": 21,
       "value": "2018-4-4",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查找彭天福,入院时间为2018-4-4,检验报告"
@@ -10341,7 +10341,7 @@
       "start": 10,
       "end": 18,
       "value": "2016-9-8",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想看于柔,入院时间：2016-9-8,电子病历"
@@ -10454,7 +10454,7 @@
       "start": 18,
       "end": 28,
       "value": "2017-12-18",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -10620,7 +10620,7 @@
       "start": 8,
       "end": 16,
       "value": "2017-8-1",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "傅心,入院时间为2017-8-1,电子病历"
@@ -10675,7 +10675,7 @@
       "start": 21,
       "end": 29,
       "value": "2018-8-2",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 33,
@@ -10699,7 +10699,7 @@
       "start": 11,
       "end": 19,
       "value": "2017-8-1",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要看何海斌,入院时间为2017-8-1,检查报告"
@@ -10795,7 +10795,7 @@
       "start": 17,
       "end": 26,
       "value": "2018-7-17",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -10841,7 +10841,7 @@
       "start": 11,
       "end": 20,
       "value": "2018-3-28",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查高连才,入院时间为2018-3-28,电子病历"
@@ -10915,7 +10915,7 @@
       "start": 16,
       "end": 26,
       "value": "2017-11-10",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -10985,7 +10985,7 @@
       "start": 14,
       "end": 23,
       "value": "2017-6-28",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -11133,7 +11133,7 @@
       "start": 0,
       "end": 9,
       "value": "2016-3-27",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-3-27"
@@ -11185,7 +11185,7 @@
       "start": 17,
       "end": 26,
       "value": "2017-5-21",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -11273,7 +11273,7 @@
       "start": 14,
       "end": 23,
       "value": "2017-1-31",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -11591,7 +11591,7 @@
       "start": 13,
       "end": 22,
       "value": "2017-1-23",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -11641,7 +11641,7 @@
       "start": 0,
       "end": 9,
       "value": "2017-3-27",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2017-3-27"
@@ -11676,7 +11676,7 @@
       "start": 20,
       "end": 29,
       "value": "2017-6-10",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 33,
@@ -11712,7 +11712,7 @@
       "start": 11,
       "end": 20,
       "value": "2016-5-22",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查询单白,入院时间：2016-5-22,相似患者"
@@ -11776,7 +11776,7 @@
       "start": 11,
       "end": 21,
       "value": "2018-12-18",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想看郭文川,入院时间为2018-12-18,患者信息"
@@ -11804,7 +11804,7 @@
       "start": 19,
       "end": 28,
       "value": "2016-8-11",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -11879,7 +11879,7 @@
       "start": 12,
       "end": 21,
       "value": "2016-4-24",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 25,
@@ -11925,7 +11925,7 @@
       "start": 12,
       "end": 20,
       "value": "2017-8-6",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查找董大宁,入院时间：2017-8-6,相似患者"
@@ -11953,7 +11953,7 @@
       "start": 9,
       "end": 19,
       "value": "2016-11-27",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "朱康健,入院时间：2016-11-27,相似患者"
@@ -11991,7 +11991,7 @@
       "start": 16,
       "end": 24,
       "value": "2018-3-1",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -12066,7 +12066,7 @@
       "start": 13,
       "end": 21,
       "value": "2018-1-7",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要查一下邹志新,入院时间：2018-1-7,检查报告"
@@ -12216,7 +12216,7 @@
       "start": 9,
       "end": 18,
       "value": "2018-4-11",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "罗红刚,入院时间：2018-4-11,检查报告"
@@ -12239,7 +12239,7 @@
       "start": 17,
       "end": 26,
       "value": "2016-3-23",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -12416,7 +12416,7 @@
       "start": 14,
       "end": 24,
       "value": "2018-12-15",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -12488,7 +12488,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-9-24",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查询曹向南,入院时间为2016-9-24,医嘱信息"
@@ -12506,7 +12506,7 @@
       "start": 18,
       "end": 26,
       "value": "2016-3-8",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -12687,7 +12687,7 @@
       "start": 0,
       "end": 9,
       "value": "2017-1-31",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2017-1-31"
@@ -12705,7 +12705,7 @@
       "start": 11,
       "end": 20,
       "value": "2016-9-10",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查萧建华,入院时间：2016-9-10,医嘱信息"
@@ -12820,7 +12820,7 @@
       "start": 0,
       "end": 9,
       "value": "2016-9-24",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-9-24"
@@ -12855,7 +12855,7 @@
       "start": 13,
       "end": 22,
       "value": "2017-3-15",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -12901,7 +12901,7 @@
       "start": 16,
       "end": 25,
       "value": "2016-2-10",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 29,
@@ -12942,7 +12942,7 @@
       "start": 12,
       "end": 21,
       "value": "2016-7-10",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 25,
@@ -12966,7 +12966,7 @@
       "start": 9,
       "end": 18,
       "value": "2017-1-14",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "黎茂才,入院时间：2017-1-14,异常指标"
@@ -13080,7 +13080,7 @@
       "start": 17,
       "end": 26,
       "value": "2018-11-6",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -13207,7 +13207,7 @@
       "start": 9,
       "end": 19,
       "value": "2017-12-19",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "何晓建,入院时间为2017-12-19,异常指标"
@@ -13322,7 +13322,7 @@
       "start": 14,
       "end": 23,
       "value": "2016-6-11",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -13366,7 +13366,7 @@
       "start": 16,
       "end": 24,
       "value": "2018-5-7",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -13439,7 +13439,7 @@
       "start": 13,
       "end": 23,
       "value": "2016-11-16",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想看一下莫琳,入院时间：2016-11-16,相关指南"
@@ -13457,7 +13457,7 @@
       "start": 18,
       "end": 28,
       "value": "2017-12-14",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -13592,7 +13592,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-3-30",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -13631,7 +13631,7 @@
       "start": 13,
       "end": 21,
       "value": "2018-3-3",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 25,
@@ -13666,7 +13666,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-2-12",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查一下董双军,入院时间：2016-2-12,电子病历"
@@ -13709,7 +13709,7 @@
       "start": 13,
       "end": 22,
       "value": "2018-4-29",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -13808,7 +13808,7 @@
       "start": 14,
       "end": 23,
       "value": "2017-9-17",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查一下韦国梁,入院时间为2017-9-17,医嘱信息"
@@ -13826,7 +13826,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-2-17",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查一下杨花丽,入院时间为2016-2-17,患者信息"
@@ -13950,7 +13950,7 @@
       "start": 0,
       "end": 9,
       "value": "2018-5-18",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2018-5-18"
@@ -14009,7 +14009,7 @@
       "start": 12,
       "end": 21,
       "value": "2018-6-14",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要查看罗良玉,入院时间为2018-6-14,电子病历"
@@ -14140,7 +14140,7 @@
       "start": 10,
       "end": 20,
       "value": "2016-11-25",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查卢景,入院时间：2016-11-25,检查报告"
@@ -14212,7 +14212,7 @@
       "start": 9,
       "end": 18,
       "value": "2017-5-29",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "林弘文,入院时间为2017-5-29,医嘱信息"
@@ -14254,7 +14254,7 @@
       "start": 12,
       "end": 22,
       "value": "2016-12-26",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -14366,7 +14366,7 @@
       "start": 19,
       "end": 28,
       "value": "2018-3-17",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -14512,7 +14512,7 @@
       "start": 17,
       "end": 26,
       "value": "2016-4-31",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -14619,7 +14619,7 @@
       "start": 18,
       "end": 27,
       "value": "2018-2-13",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 31,
@@ -14853,7 +14853,7 @@
       "start": 11,
       "end": 20,
       "value": "2016-4-24",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要查询荣满,入院时间为2016-4-24,相关指南"
@@ -14882,7 +14882,7 @@
       "start": 0,
       "end": 9,
       "value": "2017-9-31",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2017-9-31"
@@ -15132,7 +15132,7 @@
       "start": 15,
       "end": 24,
       "value": "2018-3-19",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -15222,7 +15222,7 @@
       "start": 12,
       "end": 21,
       "value": "2017-7-31",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查找邱新良,入院时间为2017-7-31,异常指标"
@@ -15328,7 +15328,7 @@
       "start": 12,
       "end": 21,
       "value": "2017-2-28",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查徐瑞俊,入院时间：2017-2-28,电子病历"
@@ -15375,7 +15375,7 @@
       "start": 19,
       "end": 28,
       "value": "2017-1-14",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -15404,7 +15404,7 @@
       "start": 21,
       "end": 30,
       "value": "2016-5-25",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 34,
@@ -15483,7 +15483,7 @@
       "start": 0,
       "end": 9,
       "value": "2016-9-20",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-9-20"
@@ -15582,7 +15582,7 @@
       "start": 15,
       "end": 24,
       "value": "2018-3-14",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -15616,7 +15616,7 @@
       "start": 11,
       "end": 20,
       "value": "2016-12-3",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要看贺桂华,入院时间：2016-12-3,医嘱信息"
@@ -15715,7 +15715,7 @@
       "start": 9,
       "end": 18,
       "value": "2018-12-7",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 22,
@@ -15799,7 +15799,7 @@
       "start": 0,
       "end": 9,
       "value": "2018-9-15",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2018-9-15"
@@ -15822,7 +15822,7 @@
       "start": 9,
       "end": 18,
       "value": "2016-8-22",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "江云燕,入院时间为2016-8-22,医嘱信息"
@@ -15857,7 +15857,7 @@
       "start": 18,
       "end": 26,
       "value": "2017-8-9",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -15896,7 +15896,7 @@
       "start": 19,
       "end": 27,
       "value": "2017-2-5",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 31,
@@ -15954,7 +15954,7 @@
       "start": 20,
       "end": 29,
       "value": "2017-5-12",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 33,
@@ -16002,7 +16002,7 @@
       "start": 15,
       "end": 25,
       "value": "2017-11-23",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 29,
@@ -16079,7 +16079,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-9-27",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要查一下张琳玲,入院时间：2016-9-27,患者信息"
@@ -16228,7 +16228,7 @@
       "start": 17,
       "end": 26,
       "value": "2017-6-19",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -16304,7 +16304,7 @@
       "start": 16,
       "end": 25,
       "value": "2016-2-22",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 29,
@@ -16416,7 +16416,7 @@
       "start": 9,
       "end": 19,
       "value": "2018-12-19",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 23,
@@ -16514,7 +16514,7 @@
       "start": 0,
       "end": 8,
       "value": "2016-4-8",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-4-8"
@@ -16591,7 +16591,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-7-12",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -16615,7 +16615,7 @@
       "start": 16,
       "end": 26,
       "value": "2018-11-13",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -16672,7 +16672,7 @@
       "start": 13,
       "end": 22,
       "value": "2018-5-24",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查找颜晓丹,入院时间：2018-5-24,相关文献"
@@ -16739,7 +16739,7 @@
       "start": 14,
       "end": 24,
       "value": "2016-11-24",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查一下罗德洋,入院时间：2016-11-24,异常指标"
@@ -16757,7 +16757,7 @@
       "start": 8,
       "end": 18,
       "value": "2017-12-29",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "管赛,入院时间：2017-12-29,检查报告"
@@ -17090,7 +17090,7 @@
       "start": 14,
       "end": 23,
       "value": "2017-5-27",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查一下邓开兵,入院时间为2017-5-27,相关文献"
@@ -17125,7 +17125,7 @@
       "start": 18,
       "end": 26,
       "value": "2016-9-9",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -17155,7 +17155,7 @@
       "start": 0,
       "end": 9,
       "value": "2016-5-18",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-5-18"
@@ -17227,7 +17227,7 @@
       "start": 9,
       "end": 18,
       "value": "2017-2-12",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 24,
@@ -17324,7 +17324,7 @@
       "start": 8,
       "end": 16,
       "value": "2017-8-3",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "田涌,入院时间：2017-8-3,医嘱信息"
@@ -17466,7 +17466,7 @@
       "start": 18,
       "end": 27,
       "value": "2016-6-23",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 31,
@@ -17554,7 +17554,7 @@
       "start": 19,
       "end": 28,
       "value": "2017-5-31",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -17620,7 +17620,7 @@
       "start": 19,
       "end": 28,
       "value": "2018-8-26",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -17666,7 +17666,7 @@
       "start": 19,
       "end": 28,
       "value": "2017-1-27",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -17714,7 +17714,7 @@
       "start": 14,
       "end": 23,
       "value": "2016-6-11",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -17767,7 +17767,7 @@
       "start": 15,
       "end": 24,
       "value": "2018-6-11",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -17820,7 +17820,7 @@
       "start": 12,
       "end": 22,
       "value": "2018-11-13",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查林建绛,入院时间：2018-11-13,医嘱信息"
@@ -17872,7 +17872,7 @@
       "start": 13,
       "end": 22,
       "value": "2017-1-13",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要看一下庄寻,入院时间：2017-1-13,相似患者"
@@ -17884,7 +17884,7 @@
       "start": 0,
       "end": 8,
       "value": "2017-1-8",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2017-1-8"
@@ -17936,7 +17936,7 @@
       "start": 12,
       "end": 21,
       "value": "2018-1-17",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查询余晨,入院时间为2018-1-17,相关指南"
@@ -17971,7 +17971,7 @@
       "start": 17,
       "end": 26,
       "value": "2018-8-18",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -18000,7 +18000,7 @@
       "start": 18,
       "end": 28,
       "value": "2017-12-11",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -18034,7 +18034,7 @@
       "start": 13,
       "end": 22,
       "value": "2017-5-25",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查看田舒强,入院时间：2017-5-25,电子病历"
@@ -18204,7 +18204,7 @@
       "start": 16,
       "end": 24,
       "value": "2017-4-5",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -18228,7 +18228,7 @@
       "start": 14,
       "end": 23,
       "value": "2017-8-17",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -18262,7 +18262,7 @@
       "start": 20,
       "end": 29,
       "value": "2016-7-21",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 33,
@@ -18308,7 +18308,7 @@
       "start": 16,
       "end": 26,
       "value": "2017-10-11",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -18332,7 +18332,7 @@
       "start": 8,
       "end": 17,
       "value": "2016-2-25",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "夏渝,入院时间为2016-2-25,医嘱信息"
@@ -18562,7 +18562,7 @@
       "start": 9,
       "end": 18,
       "value": "2017-5-20",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "汪秀英,入院时间为2017-5-20,相关文献"
@@ -18684,7 +18684,7 @@
       "start": 12,
       "end": 21,
       "value": "2017-1-20",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 25,
@@ -19128,7 +19128,7 @@
       "start": 11,
       "end": 20,
       "value": "2018-3-30",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 24,
@@ -19152,7 +19152,7 @@
       "start": 11,
       "end": 20,
       "value": "2017-1-22",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查任天伟,入院时间：2017-1-22,异常指标"
@@ -19260,7 +19260,7 @@
       "start": 14,
       "end": 22,
       "value": "2016-3-4",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查一下刘长城,入院时间为2016-3-4,电子病历"
@@ -19278,7 +19278,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-3-11",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -19317,7 +19317,7 @@
       "start": 12,
       "end": 21,
       "value": "2018-5-15",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 25,
@@ -19362,7 +19362,7 @@
       "start": 0,
       "end": 9,
       "value": "2017-2-18",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2017-2-18"
@@ -19450,7 +19450,7 @@
       "start": 12,
       "end": 21,
       "value": "2016-9-29",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 25,
@@ -19468,7 +19468,7 @@
       "start": 0,
       "end": 9,
       "value": "2018-4-21",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2018-4-21"
@@ -19515,7 +19515,7 @@
       "start": 19,
       "end": 28,
       "value": "2017-9-22",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -19539,7 +19539,7 @@
       "start": 13,
       "end": 23,
       "value": "2016-10-16",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查询吴飞龙,入院时间：2016-10-16,相关文献"
@@ -19673,7 +19673,7 @@
       "start": 14,
       "end": 22,
       "value": "2018-3-5",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -19697,7 +19697,7 @@
       "start": 8,
       "end": 18,
       "value": "2017-11-20",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "尚静,入院时间为2017-11-20,相关指南"
@@ -19715,7 +19715,7 @@
       "start": 20,
       "end": 28,
       "value": "2016-5-3",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -19812,7 +19812,7 @@
       "start": 15,
       "end": 24,
       "value": "2017-4-31",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -19882,7 +19882,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-8-16",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查询张婉霞,入院时间：2016-8-16,相关指南"
@@ -19905,7 +19905,7 @@
       "start": 9,
       "end": 19,
       "value": "2018-10-17",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "丁鸿生,入院时间为2018-10-17,医嘱信息"
@@ -19923,7 +19923,7 @@
       "start": 13,
       "end": 23,
       "value": "2017-10-11",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -19952,7 +19952,7 @@
       "start": 13,
       "end": 21,
       "value": "2018-5-3",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 25,
@@ -19976,7 +19976,7 @@
       "start": 11,
       "end": 20,
       "value": "2018-2-22",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 24,
@@ -20216,7 +20216,7 @@
       "start": 14,
       "end": 23,
       "value": "2017-11-1",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查一下张正智,入院时间：2017-11-1,相关指南"
@@ -20355,7 +20355,7 @@
       "start": 13,
       "end": 22,
       "value": "2017-12-3",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想看一下安皇,入院时间为2017-12-3,检查报告"
@@ -20378,7 +20378,7 @@
       "start": 16,
       "end": 24,
       "value": "2016-8-4",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -20402,7 +20402,7 @@
       "start": 12,
       "end": 21,
       "value": "2017-12-4",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要看盛悦琳,入院时间为2017-12-4,医嘱信息"
@@ -20562,7 +20562,7 @@
       "start": 19,
       "end": 28,
       "value": "2017-9-12",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -20618,7 +20618,7 @@
       "start": 15,
       "end": 24,
       "value": "2016-8-27",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -20654,7 +20654,7 @@
       "start": 15,
       "end": 24,
       "value": "2016-7-22",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -20764,7 +20764,7 @@
       "start": 13,
       "end": 22,
       "value": "2017-8-27",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查看余立中,入院时间为2017-8-27,患者信息"
@@ -20782,7 +20782,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-8-29",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查一下任宝忠,入院时间为2016-8-29,检验报告"
@@ -20800,7 +20800,7 @@
       "start": 9,
       "end": 18,
       "value": "2018-3-17",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "姚长安,入院时间为2018-3-17,相关文献"
@@ -20900,7 +20900,7 @@
       "start": 18,
       "end": 27,
       "value": "2016-7-14",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 31,
@@ -20977,7 +20977,7 @@
       "start": 14,
       "end": 22,
       "value": "2017-6-3",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -21033,7 +21033,7 @@
       "start": 17,
       "end": 27,
       "value": "2016-12-28",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 31,
@@ -21164,7 +21164,7 @@
       "start": 19,
       "end": 28,
       "value": "2017-4-11",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -21246,7 +21246,7 @@
       "start": 20,
       "end": 29,
       "value": "2018-7-28",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 33,
@@ -21368,7 +21368,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-9-24",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查看汪庆龄,入院时间为2016-9-24,电子病历"
@@ -21471,7 +21471,7 @@
       "start": 12,
       "end": 22,
       "value": "2017-11-25",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -21512,7 +21512,7 @@
       "start": 13,
       "end": 22,
       "value": "2018-11-4",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查找方明辉,入院时间：2018-11-4,异常指标"
@@ -21535,7 +21535,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-7-28",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查一下孔伟芳,入院时间：2016-7-28,患者信息"
@@ -21587,7 +21587,7 @@
       "start": 15,
       "end": 24,
       "value": "2017-12-5",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -21690,7 +21690,7 @@
       "start": 12,
       "end": 22,
       "value": "2018-10-17",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要查看唐圭璋,入院时间：2018-10-17,医嘱信息"
@@ -21752,7 +21752,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-9-28",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查找康家林,入院时间：2016-9-28,检验报告"
@@ -21764,7 +21764,7 @@
       "start": 0,
       "end": 10,
       "value": "2017-11-30",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2017-11-30"
@@ -21833,7 +21833,7 @@
       "start": 13,
       "end": 23,
       "value": "2018-12-19",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查询曹金华,入院时间为2018-12-19,患者信息"
@@ -21915,7 +21915,7 @@
       "start": 9,
       "end": 19,
       "value": "2016-11-18",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 25,
@@ -22020,7 +22020,7 @@
       "start": 13,
       "end": 21,
       "value": "2016-3-2",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查找白英兰,入院时间：2016-3-2,患者信息"
@@ -22134,7 +22134,7 @@
       "start": 14,
       "end": 23,
       "value": "2017-5-26",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -22163,7 +22163,7 @@
       "start": 9,
       "end": 18,
       "value": "2018-4-12",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "冷爱军,入院时间为2018-4-12,患者信息"
@@ -22181,7 +22181,7 @@
       "start": 12,
       "end": 22,
       "value": "2018-12-22",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -22210,7 +22210,7 @@
       "start": 14,
       "end": 22,
       "value": "2017-3-1",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查一下杨会萍,入院时间：2017-3-1,患者信息"
@@ -22239,7 +22239,7 @@
       "start": 0,
       "end": 9,
       "value": "2016-2-27",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-2-27"
@@ -22262,7 +22262,7 @@
       "start": 12,
       "end": 20,
       "value": "2016-6-4",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要查看黄燕忠,入院时间为2016-6-4,异常指标"
@@ -22352,7 +22352,7 @@
       "start": 12,
       "end": 21,
       "value": "2017-4-22",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查林发太,入院时间为2017-4-22,电子病历"
@@ -22429,7 +22429,7 @@
       "start": 16,
       "end": 25,
       "value": "2018-8-22",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 29,
@@ -22525,7 +22525,7 @@
       "start": 14,
       "end": 23,
       "value": "2018-12-9",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -22603,7 +22603,7 @@
       "start": 13,
       "end": 21,
       "value": "2017-7-4",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查看崔曼曼,入院时间：2017-7-4,患者信息"
@@ -22734,7 +22734,7 @@
       "start": 0,
       "end": 10,
       "value": "2017-12-15",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2017-12-15"
@@ -22757,7 +22757,7 @@
       "start": 9,
       "end": 18,
       "value": "2016-6-23",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "王中有,入院时间：2016-6-23,医嘱信息"
@@ -23040,7 +23040,7 @@
       "start": 18,
       "end": 27,
       "value": "2016-3-23",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 31,
@@ -23504,7 +23504,7 @@
       "start": 14,
       "end": 23,
       "value": "2018-4-25",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -23748,7 +23748,7 @@
       "start": 15,
       "end": 23,
       "value": "2017-8-7",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -23821,7 +23821,7 @@
       "start": 13,
       "end": 23,
       "value": "2017-11-27",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -23845,7 +23845,7 @@
       "start": 12,
       "end": 20,
       "value": "2016-9-6",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查找闫建英,入院时间：2016-9-6,相关指南"
@@ -23863,7 +23863,7 @@
       "start": 15,
       "end": 24,
       "value": "2017-6-13",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -23886,7 +23886,7 @@
       "start": 0,
       "end": 9,
       "value": "2018-8-20",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2018-8-20"
@@ -24231,7 +24231,7 @@
       "start": 0,
       "end": 9,
       "value": "2017-9-16",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2017-9-16"
@@ -24339,7 +24339,7 @@
       "start": 12,
       "end": 21,
       "value": "2018-2-19",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要看赵汝钧,入院时间为2018-2-19,相关指南"
@@ -24372,7 +24372,7 @@
       "start": 10,
       "end": 20,
       "value": "2017-12-31",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 24,
@@ -24411,7 +24411,7 @@
       "start": 13,
       "end": 22,
       "value": "2018-6-31",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查看张效清,入院时间为2018-6-31,相关文献"
@@ -24423,7 +24423,7 @@
       "start": 0,
       "end": 10,
       "value": "2016-10-31",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-10-31"
@@ -24446,7 +24446,7 @@
       "start": 16,
       "end": 25,
       "value": "2016-3-17",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 29,
@@ -24470,7 +24470,7 @@
       "start": 0,
       "end": 9,
       "value": "2018-3-14",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2018-3-14"
@@ -24559,7 +24559,7 @@
       "start": 21,
       "end": 29,
       "value": "2018-2-1",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 33,
@@ -24610,7 +24610,7 @@
       "start": 19,
       "end": 28,
       "value": "2016-8-24",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -24634,7 +24634,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-5-27",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要看一下阳春玉,入院时间：2016-5-27,医嘱信息"
@@ -24662,7 +24662,7 @@
       "start": 17,
       "end": 26,
       "value": "2016-9-11",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -24720,7 +24720,7 @@
       "start": 12,
       "end": 21,
       "value": "2017-9-11",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -24994,7 +24994,7 @@
       "start": 12,
       "end": 21,
       "value": "2016-6-30",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查询金珑,入院时间为2016-6-30,异常指标"
@@ -25128,7 +25128,7 @@
       "start": 0,
       "end": 9,
       "value": "2016-5-22",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2016-5-22"
@@ -25258,7 +25258,7 @@
       "start": 18,
       "end": 27,
       "value": "2017-2-15",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 31,
@@ -25294,7 +25294,7 @@
       "start": 17,
       "end": 27,
       "value": "2018-10-19",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 31,
@@ -25324,7 +25324,7 @@
       "start": 0,
       "end": 10,
       "value": "2018-10-27",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2018-10-27"
@@ -25450,7 +25450,7 @@
       "start": 21,
       "end": 30,
       "value": "2017-3-31",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 34,
@@ -25501,7 +25501,7 @@
       "start": 16,
       "end": 25,
       "value": "2018-9-14",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 29,
@@ -25537,7 +25537,7 @@
       "start": 9,
       "end": 18,
       "value": "2016-5-13",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "刘月霜,入院时间：2016-5-13,电子病历"
@@ -25630,7 +25630,7 @@
       "start": 19,
       "end": 28,
       "value": "2017-2-15",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -25659,7 +25659,7 @@
       "start": 13,
       "end": 22,
       "value": "2016-11-7",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查看郭德铨,入院时间：2016-11-7,相关指南"
@@ -25748,7 +25748,7 @@
       "start": 15,
       "end": 24,
       "value": "2016-4-12",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -25872,7 +25872,7 @@
       "start": 17,
       "end": 26,
       "value": "2016-2-22",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -25906,7 +25906,7 @@
       "start": 11,
       "end": 21,
       "value": "2017-12-22",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要看赵英伟,入院时间为2017-12-22,相关指南"
@@ -25923,7 +25923,7 @@
       "start": 0,
       "end": 9,
       "value": "2018-9-23",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2018-9-23"
@@ -25966,7 +25966,7 @@
       "start": 8,
       "end": 17,
       "value": "2018-4-27",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "葛源,入院时间为2018-4-27,电子病历"
@@ -26013,7 +26013,7 @@
       "start": 13,
       "end": 23,
       "value": "2018-11-29",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "想查一下黄世芬,入院时间为2018-11-29,异常指标"
@@ -26097,7 +26097,7 @@
       "start": 13,
       "end": 22,
       "value": "2017-3-30",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 26,
@@ -26155,7 +26155,7 @@
       "start": 12,
       "end": 21,
       "value": "2018-3-11",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查孙启军,入院时间为2018-3-11,患者信息"
@@ -26207,7 +26207,7 @@
       "start": 13,
       "end": 22,
       "value": "2018-6-28",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查看郝月兰,入院时间为2018-6-28,检验报告"
@@ -26244,7 +26244,7 @@
       "start": 0,
       "end": 9,
       "value": "2017-10-7",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2017-10-7"
@@ -26306,7 +26306,7 @@
       "start": 12,
       "end": 21,
       "value": "2016-4-10",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要查找韩哲明,入院时间为2016-4-10,相关指南"
@@ -26405,7 +26405,7 @@
       "start": 15,
       "end": 23,
       "value": "2017-1-2",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 27,
@@ -26454,7 +26454,7 @@
       "start": 13,
       "end": 22,
       "value": "2018-2-31",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查询范梦婕,入院时间为2018-2-31,医嘱信息"
@@ -26518,7 +26518,7 @@
       "start": 9,
       "end": 18,
       "value": "2017-4-30",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "李惠彬,入院时间为2017-4-30,电子病历"
@@ -26621,7 +26621,7 @@
       "start": 0,
       "end": 9,
       "value": "2018-4-30",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "2018-4-30"
@@ -26639,7 +26639,7 @@
       "start": 19,
       "end": 28,
       "value": "2016-2-30",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 32,
@@ -26663,7 +26663,7 @@
       "start": 17,
       "end": 25,
       "value": "2018-9-2",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 29,
@@ -26709,7 +26709,7 @@
       "start": 15,
       "end": 24,
       "value": "2018-2-29",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -26932,7 +26932,7 @@
       "start": 13,
       "end": 22,
       "value": "2017-7-10",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我想查找张雪非,入院时间为2017-7-10,患者信息"
@@ -27055,7 +27055,7 @@
       "start": 18,
       "end": 26,
       "value": "2016-5-3",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 30,
@@ -27175,7 +27175,7 @@
       "start": 8,
       "end": 17,
       "value": "2018-9-25",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "艾迷,入院时间：2018-9-25,医嘱信息"
@@ -27290,7 +27290,7 @@
       "start": 11,
       "end": 19,
       "value": "2016-1-7",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "要查寇晓波,入院时间为2016-1-7,电子病历"
@@ -27313,7 +27313,7 @@
       "start": 20,
       "end": 29,
       "value": "2018-3-15",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 33,
@@ -27493,7 +27493,7 @@
       "start": 15,
       "end": 24,
       "value": "2017-12-3",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 28,
@@ -27720,7 +27720,7 @@
       "start": 9,
       "end": 18,
       "value": "2017-4-21",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "刘美榕,入院时间为2017-4-21,相似患者"
@@ -27772,7 +27772,7 @@
       "start": 9,
       "end": 18,
       "value": "2018-8-21",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "史万华,入院时间为2018-8-21,检验报告"
@@ -27830,7 +27830,7 @@
       "start": 13,
       "end": 22,
       "value": "2018-9-19",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "我要查询沈晓军,入院时间为2018-9-19,异常指标"
@@ -27940,7 +27940,7 @@
       "start": 9,
       "end": 18,
       "value": "2018-1-28",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "贾美玲,入院时间为2018-1-28,电子病历"
@@ -28043,7 +28043,7 @@
       "start": 13,
       "end": 21,
       "value": "2016-4-8",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 25,
@@ -28079,7 +28079,7 @@
       "start": 8,
       "end": 17,
       "value": "2017-7-17",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 21,
@@ -28125,7 +28125,7 @@
       "start": 22,
       "end": 31,
       "value": "2017-6-27",
-      "entity": "admission-time"
+      "entity": "time"
      },
      {
       "start": 35,
@@ -28154,7 +28154,7 @@
       "start": 8,
       "end": 18,
       "value": "2017-12-19",
-      "entity": "admission-time"
+      "entity": "time"
      }
     ],
     "text": "宗易,入院时间为2017-12-19,异常指标"

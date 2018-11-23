@@ -11,7 +11,7 @@ with open('./data/Chinese_Names_Corpus.txt', 'r') as f:
 with open('./data/disease.txt', 'r') as f:
     disease_list = f.read().splitlines()
 
-with open('./data/laboratory_indicator_unfiltered3.txt', 'r') as f:
+with open('./data/laboratory_indicator.txt', 'r') as f:
     laboratory_indicator_list = f.read().splitlines()
 
 with open('./data/medical-record-number.txt', 'r') as f:

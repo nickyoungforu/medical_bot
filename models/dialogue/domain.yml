@@ -1,0 +1,176 @@
+%YAML 1.1
+---
+actions:
+- utter_greet
+- utter_goodbye
+- utter_deny
+- utter_ask_patient-name
+- utter_ask_medical-record-number
+- utter_ask_hospital-number
+- utter_ask_department
+- utter_ask_admission-time
+- utter_ask_bed-number
+- utter_ask_inspection-name
+- utter_ask_inspection-time
+- utter_ask_laboratory-indicator
+- utter_ask_order-name
+- utter_ask_disease-name
+- utter_ask_literature-name
+- utter_ask_guide-name
+- utter_slots_values
+- utter_noworries
+- utter_submit
+config:
+  store_entities_as_slots: true
+entities:
+- patient-name
+- medical-record-number
+- hospital-number
+- department
+- time
+- bed-number
+- inspection-name
+- laboratory-indicator
+- order-name
+- disease-name
+- literature-name
+- guide-name
+forms:
+- request_form
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- deny:
+    use_entities: true
+- inform:
+    use_entities: true
+- request_patient_info:
+    use_entities: false
+- request_patient_emr:
+    use_entities: false
+- request_patient_inspection_report:
+    use_entities: false
+- request_patient_laboratory_report:
+    use_entities: false
+- request_patient_laboratory_indicator:
+    use_entities: false
+- request_patient_abnormal:
+    use_entities: false
+- request_patient_Medical_order:
+    use_entities: false
+- request_similar_patient:
+    use_entities: false
+- request_patient_detail:
+    use_entities: false
+- request_related_literature:
+    use_entities: false
+- request_literature_detail:
+    use_entities: false
+- request_related_guide:
+    use_entities: false
+- request_guide_detail:
+    use_entities: false
+- request_collect:
+    use_entities: false
+slots:
+  admission-time:
+    auto_fill: false
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  bed-number:
+    auto_fill: false
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  department:
+    auto_fill: false
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  disease-name:
+    auto_fill: false
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  guide-name:
+    auto_fill: false
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  hospital-number:
+    auto_fill: false
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  inspection-name:
+    auto_fill: false
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  inspection-time:
+    auto_fill: false
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  laboratory-indicator:
+    auto_fill: false
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  literature-name:
+    auto_fill: false
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  medical-record-number:
+    auto_fill: false
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  order-name:
+    auto_fill: false
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  patient-name:
+    auto_fill: false
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  requested_slot:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+templates:
+  utter_ask_admission-time:
+  - text: 请输入患者的住院时间
+  utter_ask_bed-number:
+  - text: 请输入患者的床号
+  utter_ask_department:
+  - text: 请输入患者的科室
+  utter_ask_disease-name:
+  - text: 请输入需要查询的疾病诊断
+  utter_ask_guide-name:
+  - text: 请输入需要查询的临床指南标题
+  utter_ask_hospital-number:
+  - text: 请输入患者的住院号
+  utter_ask_inspection-name:
+  - text: 请输入需要查询的检查报告
+  utter_ask_inspection-time:
+  - text: 请输入需要查询的患者检验时间
+  utter_ask_laboratory-indicator:
+  - text: 请输入需要查询的检验指标
+  utter_ask_literature-name:
+  - text: 请输入需要查询的文献标题
+  utter_ask_medical-record-number:
+  - text: 请输入患者的病历号
+  utter_ask_order-name:
+  - text: 请输入需要查询的医嘱类型
+  utter_ask_patient-name:
+  - text: 请输入需要查询的患者名字
+  utter_default:
+  - text: 抱歉，我好像听不懂你说的
+  utter_goodbye:
+  - text: 拜拜
+  utter_greet:
+  - text: 你好
+  utter_noworries:
+  - text: end
+  utter_slots_values:
+  - text: "查询结果:\n - patient-name: {patient-name}\n - medical-record-number: {medical-record-number}\n\
+      \ - hospital-number: {hospital-number}\n - department: {department}\n - admission-time:\
+      \ {admission-time}\n - bed-number: {bed-number}\n - inspection-name: {inspection-name}\n\
+      \ - inspection-time: {inspection-time}\n - laboratory-indicator: {laboratory-indicator}\n\
+      \ - order-name: {order-name}\n - disease-name: {disease-name}\n"
+  utter_submit:
+  - text: slots filled
