@@ -6,28 +6,21 @@
 
 from rasa_core_sdk import ActionExecutionRejection
 from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT, logger
-from rasa_core_sdk.events import SlotSet, Form
+from rasa_core_sdk.events import SlotSet, Form, Restarted
 
 
 class Action_Total(FormAction):
 
     RANDOMIZE = True
     request_intent = ''
+    time_type = {}
     slots_filled = set()
+    type_limit_map = {'入院时间': 'admission-time',
+                       '送检时间': 'inspection-time'}
+
     def name(self):
         return 'request_form'
 
-    # @staticmethod
-    # def required_slots_mapping(tracker):
-    #     last_entity = tracker.latest_message.get('entities')
-    #     def validate_entity(entity):
-    #         if entity:
-    #             if set([k_v['entity'] for k_v in entity]).issubset({"department", "admission-time", "bed-number"}):
-    #         pass
-    #     return {
-    #         1: 1
-    #     }
-    #     pass
     # 直接屏蔽基类method, 不重写
     def required_slots(self, tracker):
         required_slots_mapping = {
@@ -74,9 +67,6 @@ class Action_Total(FormAction):
             return required_slots_mapping.get(self.request_intent).get('path2')
 
     def slot_mappings(self):
-        # return {"patient-name": self.from_entity(entity="patient-name",),
-        #         "admission-time": self.from_entity(entity="admission-time", ),
-        #         }
         return {"patient-name": self.from_entity(entity="patient-name",),
                 "medical-record-number": self.from_entity(entity="medical-record-number",),
                 "hospital-number": self.from_entity(entity="hospital-number", ),
@@ -122,7 +112,6 @@ class Action_Total(FormAction):
             elif slot == 'sth...':
                 pass
         '''
-
         # validation succeed, set the slots values to the extracted values
         return [SlotSet(slot, value) for slot, value in slot_values.items()]
 
@@ -164,8 +153,12 @@ class Action_Total(FormAction):
         }
         operate = intent2operate.get(self.request_intent, none_func)
         # return [Restarted()]
-        # 若在此restart response的event执行后，预测后续action时,tracker已空
         return []
+
+    @staticmethod
+    def get_slot_type(tracker, slot_type):
+        return [entity.get(slot_type) for entity in tracker.latest_message.get('entities') if entity.get(slot_type, None)]
+        # return tracker.latest_message.get('entities').get(slot_type, None)
 
     def extract_other_slots(self,
                             dispatcher,  # type: CollectingDispatcher
@@ -182,27 +175,44 @@ class Action_Total(FormAction):
         slot_values = {}
         for slot in self.required_slots(tracker):
             # look for other slots
-            if slot != slot_to_fill:
+            if slot != slot_to_fill and slot not in self.type_limit_map.values():
                 # list is used to cover the case of list slot type
                 other_slot_mappings = self.get_mappings_for_slot(slot)
 
                 for other_slot_mapping in other_slot_mappings:
+
                     intent = tracker.latest_message.get("intent",
                                                         {}).get("name")
-                    # check whether the slot should be filled
-                    # by entity with the same name
-                    # should_fill_slot = (
+                    # if other_slot_mapping.get("entity") == 'time':
+                    #     # if intent == 'inform':
+                    #     #     slot_key = self.type_limit_map.get(self.time_type)
+                    #     # else:
+                    #     slot_key = self.type_limit_map.get(self.time_type)
+                    #     should_fill_slot = (
                     #         other_slot_mapping["type"] == "from_entity" and
-                    #         other_slot_mapping.get("entity") == slot and
+                    #         slot_key == slot and
                     #         self.intent_is_desired(other_slot_mapping,
                     #                                tracker)
-                    # )
+                    #     )
+                    # else:
+                    #     should_fill_slot = (
+                    #             other_slot_mapping["type"] == "from_entity" and
+                    #             other_slot_mapping.get("entity") == slot and
+                    #             self.intent_is_desired(other_slot_mapping,
+                    #                                    tracker)
+                    #     )
+                    #     slot_key = slot
+                    # type_entity = self.get_slot_type(tracker, self.slot_type_limit.get(other_slot_mapping.get("entity"), ''))
+
                     # 为了处理不同slot用同一entity抽取
+                    # else:
                     should_fill_slot = (
                             other_slot_mapping["type"] == "from_entity" and
+                            other_slot_mapping.get("entity") == slot and
                             self.intent_is_desired(other_slot_mapping,
                                                    tracker)
                     )
+                    slot_key = slot
                     if should_fill_slot:
                         # list is used to cover the case of list slot type
                         # value = list(tracker.get_latest_entity_values(slot))
@@ -213,14 +223,27 @@ class Action_Total(FormAction):
                         if value:
                             logger.debug("Extracted '{}' "
                                          "for extra slot '{}'"
-                                         "".format(value, slot))
-                            slot_values[slot] = value
+                                         "".format(value, slot_key))
+                            slot_values[slot_key] = value
                             # this slot is done, check  next
                             break
 
         return slot_values
 
+
+
     def _activate_if_required(self, tracker):
+        entities = tracker.latest_message.get('entities')
+
+        # for i, entity in enumerate(entities):
+        #     if entity.get('entity') == 'time-type' and i+1 < len(entities)-1:
+        #         if entities[i+1].get('entity') == 'time':
+        #             self.time_type[entity.get('entity')] = entities[i+1].get('entity')
+        #
+        # self.time_type = [entity.get('value').replace(' ', '') for entity in tracker.latest_message.get('entities') if entity.get('entity', None)=='time-type']
+        # self.time_type = self.time_type[0] if self.time_type is not [] else None
+        # self.time_type = None if self.time_type == [] else self.time_type[0]
+
         if tracker.active_form.get('name') is not None:
             logger.debug("The form '{}' is active"
                          "".format(tracker.active_form))
@@ -236,7 +259,55 @@ class Action_Total(FormAction):
 
     def _deactivate(self):
         self.request_intent = ''
+        self.time_type = {}
         self.slots_filled.clear()
         logger.debug("Deactivating the form '{}'".format(self.name()))
         return [Form(None), SlotSet(REQUESTED_SLOT, None)]
+
+    def get_time_type_parirs(self, tracker):
+        entities = tracker.latest_message.get('entities')
+        for i, entity in enumerate(entities):
+            if entity.get('entity') == 'time-type' and i+1 < len(entities):
+                if entities[i+1].get('entity') == 'time':
+                    self.time_type[self.type_limit_map[entity.get('value').replace(' ', '')]] = entities[i+1].get('value')
+
+    def run(self, dispatcher, tracker, domain):
+        # type: (CollectingDispatcher, Tracker, Dict[Text, Any]) -> List[Dict]
+        """Execute the side effects of this form:
+            - activate if needed
+            - validate user input if needed
+            - set validated slots
+            - utter_ask_{slot} template with the next required slot
+            - submit the form if all required slots are set
+            - deactivate the form
+        """
+        # activate the form
+        events = self._activate_if_required(tracker)
+        self.get_time_type_parirs(tracker)
+        for types, time in self.time_type.items():
+            if types in self.required_slots(tracker):
+                tracker.slots[types] = time
+                events.append(SlotSet(types, time))
+        # validate user input
+        events.extend(self._validate_if_required(dispatcher, tracker, domain))
+        temp_tracker = tracker.copy()
+        # create temp tracker with populated slots from `validate` method
+
+        for e in events:
+            if e['event'] == 'slot':
+                temp_tracker.slots[e["name"]] = e["value"]
+
+        next_slot_events = self.request_next_slot(dispatcher, temp_tracker,
+                                                  domain)
+        if next_slot_events is not None:
+            # request next slot
+            events.extend(next_slot_events)
+        else:
+            # there is nothing more to request, so we can submit
+            events.extend(self.submit(dispatcher, temp_tracker, domain))
+            # deactivate the form after submission
+            events.extend(self._deactivate())
+
+        return events
+
 

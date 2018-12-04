@@ -50,7 +50,7 @@ def department():
     return random.choice(department_list)
 
 
-def admission_time():
+def time():
     return random.choice(time_list)
 
 

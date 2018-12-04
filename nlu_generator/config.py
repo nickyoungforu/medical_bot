@@ -10,8 +10,7 @@ subject_list = ['我']
 adverbial_list = ['想', '要']
 predicate_list = ['查', '看', '查询', '查看', '查找', '看一下', '查一下', ]
 attribute_list = [[['姓名'], ['病历号'], ['住院号'], ['科室', '入院时间', '床号'], ['姓名', '入院时间']],
-                  [['疾病诊断']],
-                  [['送检时间'], ['检验指标_att'], ['检验指标_att', '送检时间'], ['医嘱类型']], ]
+                  [['疾病诊断'], ['检查报告名称'], ['送检时间'], ['检验指标_att'], ['检验指标_att', '送检时间'], ['医嘱类型']], ]
 objects_list = ['患者信息', '电子病历', '检查报告', '检验报告', '检验指标', '异常指标', '医嘱信息', '相似患者',
                 '相关文献', '相关指南', '收藏']
 
@@ -30,11 +29,11 @@ generate_path = [
                 ['attribute'],
                 ['objects'],
                 ]
-#
+
 ban_rule_map = {'疾病诊断': {'患者信息', '电子病历', '检查报告', '检验报告', '检验指标', '异常指标', '医嘱信息', '收藏'},
                 '检查报告名称': {'患者信息', '电子病历', '检验报告', '检验指标', '异常指标', '医嘱信息', '相似患者', '相关文献', '相关指南', '收藏'},
                 # '检验报告名称': {'患者信息', '电子病历', '检查报告', '异常指标', '医嘱信息', '相似患者', '相关文献', '相关指南', },
-                '送检时间': {'患者信息', '电子病历', '异常指标', '医嘱信息', '相似患者', '相关文献', '相关指南', '送检时间', '收藏'},
+                '送检时间': {'患者信息', '电子病历', '异常指标', '医嘱信息', '相似患者', '相关文献', '相关指南', '收藏'},
                 '检验指标_att': {'患者信息', '电子病历', '检查报告', '异常指标', '医嘱信息', '相似患者', '相关文献', '相关指南', '收藏'},
                 '医嘱类型': {'患者信息', '电子病历', '检验报告', '检查报告', '异常指标', '相似患者', '相关文献', '相关指南', '检验指标', '收藏'},
                 '姓名': {'收藏'},
@@ -67,6 +66,7 @@ intent_map = {'患者信息': 'request_patient_info',
               '检验报告名称': 'inform',
               '检验指标_att': 'inform',
               '医嘱类型': 'inform',
+              '送检时间': 'inform'
               }
 
 slot_map = {'姓名': 'patient-name',
@@ -80,36 +80,36 @@ slot_map = {'姓名': 'patient-name',
             '检验报告名称': 'laboratory-name',
             '检验指标_att': 'laboratory-indicator',
             '医嘱类型': 'order-name',
-            '送检时间': 'inspection-time',
+            '送检时间': 'time',
             }
 
 func_map = {'姓名': patient_name,
             '病历号': medical_record_number,
             '住院号': hospital_number,
             '科室': department,
-            '入院时间': admission_time,
+            '入院时间': time,
             '床号': bed_number,
             '疾病诊断': disease_name,
             '检查报告名称': inspection_name,
-            '检验报告名称': laboratory_name,
+            # '检验报告名称': laboratory_name,
             '检验指标_att': laboratory_indicator,
             '医嘱类型': order_name,
-            '送检时间': inspection_time,
+            '送检时间': time,
             }
 
 skeleton2muscle = {
-                   '姓名': ['%s,'],
-                   '病历号': ['病历号：%s,', '病历号为%s,'],
-                   '住院号': ['住院号：%s,', '住院号为%s,'],
-                   '科室': ['科室：%s,', '科室为%s,', '%s,'],
-                   '入院时间': ['入院时间：%s,', '入院时间为%s,'],
-                   '床号': ['床号：%s,', '床号为%s,'],
+                   '姓名': ['%s'],
+                   '病历号': ['病历号为%s'],
+                   '住院号': ['住院号为%s'],
+                   '科室': ['科室为%s', '%s'],
+                   '入院时间': ['入院时间为%s', '入院时间是%s'],
+                   '床号': ['床号为%s'],
                    '疾病诊断': ['%s'],
-                   '检查报告名称': ['%s,'],
+                   '检查报告名称': ['%s'],
                    # '检验报告名称': ['%s'],
-                   '检验指标_att': ['%s,'],
-                   '医嘱类型': ['医嘱类型：%s,', '医嘱类型为%s,'],
-                   '送检时间': ['送检时间：%s,', '送检时间为%s,'],
+                   '检验指标_att': ['%s'],
+                   '医嘱类型': ['医嘱类型为%s'],
+                   '送检时间': ['送检时间为%s', '送检时间是%s'],
                    }
 
 
@@ -128,17 +128,15 @@ def get_component(**kargs):
     component_list = kargs['com_list']
     if combine:
         com_index_rnd = random.random()
-        if com_index_rnd < 0.7:
+        if com_index_rnd < 0.5:
             com_item = copy.deepcopy(random.choice(component_list[0]))
-            if random.random() > 0.7:
-                com_item.extend(copy.deepcopy(random.choice(component_list[2])))
-
-        elif com_index_rnd < 0.85:
-            com_item = copy.deepcopy(random.choice(component_list[1]))
+            if random.random() > 0.5:
+                com_item.extend(copy.deepcopy(random.choice(component_list[1])))
         else:
-            com_item = copy.deepcopy(random.choice(component_list[2]))
+            com_item = copy.deepcopy(random.choice(component_list[1]))
     else:
         com_item = copy.deepcopy(random.choice(component_list))
+    random.shuffle(com_item) if isinstance(com_item, list) else com_item
     return com_item
 
 

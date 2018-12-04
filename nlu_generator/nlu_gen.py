@@ -5,21 +5,17 @@
 
 import json
 import random
-import copy
 import nlu_generator.config as conf
-import re
 
 
-
-
-
-def nlu_generator(gen_num):
+def nlu_generator(gen_num, output_file):
     nlu_data = {"rasa_nlu_data": {"common_examples": [],
                                   "regex_features": [],
                                   "entity_synonyms": [{"value": '', "synonyms": []}]
                                   }
                 }
     generates_res = []
+    unique_text = set()
     count = 0
     while count < gen_num:
         sel_path = random.choice(conf.generate_path)
@@ -36,13 +32,17 @@ def nlu_generator(gen_num):
         # infrom
         if sel_path == ['attribute'] and len(single_gen_result) > 1:
             single_gen_result = [random.choice(single_gen_result)]
-        for rule in conf.ban_rules:
-            if rule == set(single_gen_result):
-                singe_gen_complete = False
-                break
-            if rule.issubset(set(single_gen_result)) and len(rule) > 1:
-                singe_gen_complete = False
-                break
+        # 0.2的样本不按照正常叙述规则
+        if random.random() < 0.8:
+            for rule in conf.ban_rules:
+                # 单独出现无意义的成分
+                if rule == set(single_gen_result):
+                    singe_gen_complete = False
+                    break
+                if rule.issubset(set(single_gen_result)) and len(rule) > 1:
+                    singe_gen_complete = False
+                    break
+
 
         if not singe_gen_complete:
             continue
@@ -56,6 +56,19 @@ def nlu_generator(gen_num):
             muscle_trans = trans if gen_node not in conf.skeleton2muscle else random.choice(conf.skeleton2muscle[gen_node]) % trans
             if len(single_gen_result) == 1:
                 muscle_trans = trans
+            # 在定语后面加'的'
+            if i == len(single_gen_result)-1 and i > 1 and single_gen_result[i-1] in conf.slot_map:
+                if random.random() > 0.5:
+                    muscle_trans = '的' + muscle_trans
+            # 在时间槽前增加时间类型槽
+            if gen_node in ['入院时间', '送检时间'] and len(single_gen_result) > 1:
+                time_type = gen_node
+                start = len(''.join(gen_transform))
+                end = start + len(time_type)
+                entities.append({"start": start,
+                                 "end": end,
+                                 "value": '入院时间',
+                                 "entity": 'time-type'})
             if gen_node in conf.slot_map:
                 start = len(''.join(gen_transform)) + muscle_trans.find(trans)
                 end = start + len(trans)
@@ -63,28 +76,27 @@ def nlu_generator(gen_num):
                                  "end": end,
                                  "value": trans,
                                  "entity": conf.slot_map[gen_node]})
+
             gen_transform.append(muscle_trans)
+        if ''.join(gen_transform) in unique_text:
+            continue
         generates_res.append({"intent": intent,
                               "entities": entities,
                               "text": ''.join(gen_transform),
                               })
+        unique_text.add(''.join(gen_transform))
         print(''.join(gen_transform), intent, entities)
         count += 1
     # print(generates_res)
     nlu_data["rasa_nlu_data"]["common_examples"] = generates_res
     # print(json.dumps(nlu_data, indent=1))
-    f = open('../data/nlu.json', 'w', encoding='utf-8')
+    f = open(output_file, 'w', encoding='utf-8')
     json.dump(nlu_data, f, indent=1, ensure_ascii=False)
     f.close()
     # print(nlu_data)
 
     return nlu_data
 
-
-
 if __name__ == '__main__':
-    # import IPython
-    # IPython.embed()
-    nlu_generator(3000)
-    # print((getattr(conf, 'adverbial_list')))
+    nlu_generator(gen_num=30000, output_file='../data/nlu.json')
 

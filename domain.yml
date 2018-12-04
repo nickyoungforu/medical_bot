@@ -83,8 +83,10 @@ entities:
   - hospital-number
   - department
   - time
+  - time-type
   - bed-number
   - inspection-name
+  - inspection-time
   - laboratory-indicator
   - order-name
   - disease-name

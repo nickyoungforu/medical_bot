@@ -6,6 +6,29 @@
 #- name: "ner_synonyms"
 #- name: "intent_featurizer_count_vectors"
 #- name: "intent_classifier_tensorflow_embedding"
+
 language: "zh"
 
 pipeline: "spacy_sklearn"
+
+#pipeline:
+#- name: "nlp_spacy",
+#- name: "tokenizer_spacy",
+#- name: "intent_featurizer_spacy",
+#- name: "intent_entity_featurizer_regex",
+#- name: "ner_crf",
+#  - features: "pos"
+#- name: "ner_synonyms",
+#- name: "intent_classifier_sklearn",
+
+
+#language: "zh"
+#
+#pipeline:
+#- name: "nlp_mitie"
+#  model: "data/total_word_feature_extractor.dat"
+#- name: "tokenizer_jieba"
+#- name: "ner_mitie"
+#- name: "ner_synonyms"
+#- name: "intent_featurizer_mitie"
+#- name: "intent_classifier_sklearn"

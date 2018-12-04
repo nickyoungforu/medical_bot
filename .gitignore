@@ -1,2 +1,8 @@
 /.idea
+data/
+models/
 **/__pycache__
+*_test.py
+*.bak
+nlu_generator/t.py
+asr/*.wav

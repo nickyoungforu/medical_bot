@@ -5,6 +5,9 @@
 
 
 from rasa_nlu.model import Interpreter
+from rasa_nlu.extractors.crf_entity_extractor import CRFEntityExtractor
+from rasa_nlu import registry
+
 import json
 interpreter = Interpreter.load("./models/nlu/current")
 while True:
