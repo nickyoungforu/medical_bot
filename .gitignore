@@ -8,5 +8,6 @@ nlu_test.py
 train_core_test.py
 *.bash
 *.bak
+*.log
 nlu_generator/t.py
 asr/*.wav
