@@ -1,6 +1,6 @@
 /.idea
-data/
-models/
+/data/*
+models/*
 **/__pycache__
 core_test.py
 endpoint_test.py
