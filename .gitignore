@@ -2,7 +2,11 @@
 data/
 models/
 **/__pycache__
-*_test.py
+core_test.py
+endpoint_test.py
+nlu_test.py
+train_core_test.py
+*.bash
 *.bak
 nlu_generator/t.py
 asr/*.wav
