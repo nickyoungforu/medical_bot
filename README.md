@@ -1,3 +1,6 @@
+### SpaCy chinese support
+https://github.com/howl-anderson/Chinese_models_for_SpaCy
+
 ### nlu samples generate
 ```bash
 python nlu_generator/nlu_gen.py
