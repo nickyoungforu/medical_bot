@@ -6,10 +6,10 @@
 import random
 
 with open('./data/Chinese_Names_Corpus.txt', 'r') as f:
-    name_list = f.read().splitlines()
+    patient_name_list = f.read().splitlines()
 
 with open('./data/disease.txt', 'r') as f:
-    disease_list = f.read().splitlines()
+    disease_name_list = f.read().splitlines()
 
 with open('./data/laboratory_indicator.txt', 'r') as f:
     laboratory_indicator_list = f.read().splitlines()
@@ -35,7 +35,7 @@ with open('./data/inspection_name.txt', 'r') as f:
 
 # base generator function
 def patient_name():
-    return random.choice(name_list)
+    return random.choice(patient_name_list)
 
 
 def medical_record_number():
@@ -75,7 +75,7 @@ def order_name():
 
 
 def disease_name():
-    return random.choice(disease_list)
+    return random.choice(disease_name_list)
 
 
 def guide_name():

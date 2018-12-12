@@ -65,10 +65,13 @@ def nlu_generator(gen_num, output_file):
                 time_type = gen_node
                 start = len(''.join(gen_transform))
                 end = start + len(time_type)
-                entities.append({"start": start,
-                                 "end": end,
-                                 "value": '入院时间',
-                                 "entity": 'time-type'})
+                t_index = max(muscle_trans.find('时间'), muscle_trans.find('日期'))
+                if t_index != -1:
+                    type_value = muscle_trans[:t_index+2]
+                    entities.append({"start": start,
+                                     "end": end,
+                                     "value": type_value,
+                                     "entity": 'time-type'})
             if gen_node in conf.slot_map:
                 start = len(''.join(gen_transform)) + muscle_trans.find(trans)
                 end = start + len(trans)
@@ -87,7 +90,34 @@ def nlu_generator(gen_num, output_file):
         unique_text.add(''.join(gen_transform))
         print(''.join(gen_transform), intent, entities)
         count += 1
-    # print(generates_res)
+
+    # add special entity:
+    '''
+    from nlu_generator.genertor_functions import patient_name_list, disease_name_list, laboratory_indicator_list, medical_record_number_list, \
+                      bed_number_list, department_list, hospital_number_list, time_list, inspection_name_list
+    entity_tmp_map = {0: 'patient-name',
+                      3: 'medical-record-number',
+                      6: 'hospital-number',
+                      5: 'department',
+                      7: 'time',
+                      4: 'bed-number',
+                      1: 'disease-name',
+                      8: 'inspection-name',
+                      2: 'laboratory-indicator',
+                      }
+    for i, list_name in enumerate([patient_name_list, disease_name_list, laboratory_indicator_list, medical_record_number_list,
+                      bed_number_list, department_list, hospital_number_list, time_list, inspection_name_list,]):
+        for item in list_name:
+            entity = [{"start": 0,
+                      "end": len(item),
+                      "value": item,
+                      "entity": entity_tmp_map[i]}]
+            generates_res.append({"intent": 'inform',
+                                  "entities": entity,
+                                  "text": item,
+                                  })
+    '''
+    print(len(generates_res))
     nlu_data["rasa_nlu_data"]["common_examples"] = generates_res
     # print(json.dumps(nlu_data, indent=1))
     f = open(output_file, 'w', encoding='utf-8')

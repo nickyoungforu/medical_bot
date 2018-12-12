@@ -21,8 +21,8 @@ if IS_PY3:
 
 
 
-API_KEY = ''
-SECRET_KEY = ''
+API_KEY = '22hQrRcbkQS7mRgtuD2h25Q3'
+SECRET_KEY = 'u3bmPDWHZV3lktcu8jdiXOe1uErwehhw'
 
 # 需要识别的文件
 # AUDIO_FILE = './pcm/16k.pcm' # 只支持 pcm/wav/amr

@@ -16,12 +16,11 @@ class Action_Total(FormAction):
     time_type = {}
     slots_filled = set()
     type_limit_map = {'入院时间': 'admission-time',
-                       '送检时间': 'inspection-time'}
+                      '送检时间': 'inspection-time'}
 
     def name(self):
         return 'request_form'
 
-    # 直接屏蔽基类method, 不重写
     def required_slots(self, tracker):
         required_slots_mapping = {
             'request_patient_info':
@@ -183,36 +182,12 @@ class Action_Total(FormAction):
 
                     intent = tracker.latest_message.get("intent",
                                                         {}).get("name")
-                    # if other_slot_mapping.get("entity") == 'time':
-                    #     # if intent == 'inform':
-                    #     #     slot_key = self.type_limit_map.get(self.time_type)
-                    #     # else:
-                    #     slot_key = self.type_limit_map.get(self.time_type)
-                    #     should_fill_slot = (
-                    #         other_slot_mapping["type"] == "from_entity" and
-                    #         slot_key == slot and
-                    #         self.intent_is_desired(other_slot_mapping,
-                    #                                tracker)
-                    #     )
-                    # else:
-                    #     should_fill_slot = (
-                    #             other_slot_mapping["type"] == "from_entity" and
-                    #             other_slot_mapping.get("entity") == slot and
-                    #             self.intent_is_desired(other_slot_mapping,
-                    #                                    tracker)
-                    #     )
-                    #     slot_key = slot
-                    # type_entity = self.get_slot_type(tracker, self.slot_type_limit.get(other_slot_mapping.get("entity"), ''))
-
-                    # 为了处理不同slot用同一entity抽取
-                    # else:
                     should_fill_slot = (
                             other_slot_mapping["type"] == "from_entity" and
                             other_slot_mapping.get("entity") == slot and
                             self.intent_is_desired(other_slot_mapping,
                                                    tracker)
                     )
-                    slot_key = slot
                     if should_fill_slot:
                         # list is used to cover the case of list slot type
                         # value = list(tracker.get_latest_entity_values(slot))
@@ -223,27 +198,14 @@ class Action_Total(FormAction):
                         if value:
                             logger.debug("Extracted '{}' "
                                          "for extra slot '{}'"
-                                         "".format(value, slot_key))
-                            slot_values[slot_key] = value
+                                         "".format(value, slot))
+                            slot_values[slot] = value
                             # this slot is done, check  next
                             break
 
         return slot_values
 
-
-
     def _activate_if_required(self, tracker):
-        entities = tracker.latest_message.get('entities')
-
-        # for i, entity in enumerate(entities):
-        #     if entity.get('entity') == 'time-type' and i+1 < len(entities)-1:
-        #         if entities[i+1].get('entity') == 'time':
-        #             self.time_type[entity.get('entity')] = entities[i+1].get('entity')
-        #
-        # self.time_type = [entity.get('value').replace(' ', '') for entity in tracker.latest_message.get('entities') if entity.get('entity', None)=='time-type']
-        # self.time_type = self.time_type[0] if self.time_type is not [] else None
-        # self.time_type = None if self.time_type == [] else self.time_type[0]
-
         if tracker.active_form.get('name') is not None:
             logger.debug("The form '{}' is active"
                          "".format(tracker.active_form))
